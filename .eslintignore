@@ -1,0 +1,5 @@
+lib/
+dist/
+tmp/
+node_modules/
+.next
