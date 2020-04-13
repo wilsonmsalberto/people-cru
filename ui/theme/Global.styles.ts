@@ -1,6 +1,11 @@
 export const Globals = `
   /* Remove the margin in all browsers */
+  html, body {
+    height: 100%;
+  }
+
   body {
+    min-height: 100%;
     margin: 0;
     padding: 0;
     margin: 0;
@@ -18,6 +23,7 @@ export const Globals = `
   /* 1. Correct the line height in all browsers. */
   /* 2. Prevent adjustments of font size after orientation changes in iOS. */
   html {
+    
     box-sizing: border-box;
     font-size: 62.5%;
     line-height: 1.15;

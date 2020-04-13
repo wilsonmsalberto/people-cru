@@ -1,16 +1,20 @@
 /** @jsx jsx */
-import { useEffect, useState } from 'react';
 import { NextPage } from 'next';
 import { AppProps } from 'next/app';
 
-// Styles
+// Theming
 import { ThemeProvider } from 'emotion-theming';
 import { css, Global, jsx } from '@emotion/core';
+import { GlobalStyles, ThemeWrapper } from 'ui/theme';
 
-import { Main } from './styles';
+// Context
+import { AppThemeConsumer, AppThemeProvider } from 'context/AppTheme';
 
-import { GlobalStyles, Dark, Light, ThemeWrapper } from 'ui/theme';
+// Components
 import Header from 'ui/blocks/Header';
+
+// Styles
+import { Main } from './styles';
 
 const UserListApp: NextPage<AppProps> = ({
   Component,
@@ -19,31 +23,26 @@ const UserListApp: NextPage<AppProps> = ({
   Component: React.ComponentType;
   pageProps: Record<string, any>;
 }) => {
-  const [activeTheme, setActiveTheme] = useState('light');
-  const [theme, setTheme] = useState(activeTheme);
-
-  const themes: Record<string, any> = {
-    light: Light,
-    dark: Dark,
-  };
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    setActiveTheme(savedTheme || theme);
-  }, [theme]);
-
   return (
-    <ThemeProvider theme={themes[activeTheme]}>
-      <ThemeWrapper>
-        <Header setTheme={setTheme} activeTheme={activeTheme} />
+    <AppThemeProvider>
+      <AppThemeConsumer>
+        {(appThemeContext): React.ReactNode | null =>
+          appThemeContext && (
+            <ThemeProvider theme={appThemeContext.theme}>
+              <ThemeWrapper>
+                <Header />
 
-        <Main>
-          <Component {...pageProps}></Component>
-        </Main>
+                <Main>
+                  <Component {...pageProps}></Component>
+                </Main>
 
-        <Global styles={css(GlobalStyles.Globals)} />
-      </ThemeWrapper>
-    </ThemeProvider>
+                <Global styles={css(GlobalStyles.Globals)} />
+              </ThemeWrapper>
+            </ThemeProvider>
+          )
+        }
+      </AppThemeConsumer>
+    </AppThemeProvider>
   );
 };
 

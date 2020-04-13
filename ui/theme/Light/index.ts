@@ -7,9 +7,12 @@ const pallette = {
   'royal-blue': '#624DE3',
   mystic: '#EAEDF3',
   zircon: '#F9FAFF',
+  mercury: '#E5E5E5',
+  white: '#FFFFFF',
 };
 
 const colors = {
+  white: pallette.white,
   background: pallette['link-water'],
   buttonBgColor: pallette['royal-blue'],
   buttonTextColor: pallette.zircon,
