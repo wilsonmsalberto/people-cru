@@ -21,6 +21,8 @@ const colors = {
   primary: pallette['link-water'],
   secondary: pallette['bermuda-gray'],
   textColor: pallette['prussian-blue'],
+  tableRow: pallette.white,
+  header: pallette.white,
   ...pallette,
 };
 

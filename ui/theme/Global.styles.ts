@@ -73,11 +73,7 @@ const Globals = `
       -webkit-appearance: none;
     }
   }
-
-  table, th, td {
-    border: 1px solid black;
-  }
-
+  
   h1, h2, h3 {
     margin: 0;
   }
@@ -86,6 +82,10 @@ const Globals = `
     padding: 0;
     margin: 0;
     list-style-type: none;
+  }
+
+  p {
+    margin: 0;
   }
 `;
 

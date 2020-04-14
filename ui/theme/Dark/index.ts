@@ -6,10 +6,11 @@ const pallette = {
   clouds: '#ecf0f1',
   gunmetal: '#273444',
   zircon: '#F9FAFF',
+  white: '#FFFFFF',
 };
 
 const colors = {
-  secondary: pallette['gray-blue'],
+  secondary: pallette.clouds,
   primary: pallette.charcoal,
   default: pallette.gunmetal,
   background: pallette['yankees-blue'],
@@ -17,6 +18,8 @@ const colors = {
   buttonBgColor: pallette['royal-blue'],
   buttonTextColor: pallette.zircon,
   highlight: pallette['royal-blue'],
+  tableRow: pallette['gray-blue'],
+  header: pallette.charcoal,
   ...pallette,
 };
 

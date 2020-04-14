@@ -7,10 +7,10 @@ import ThemeSwitcher from 'ui/blocks/ThemeSwitcher';
 import User from 'ui/blocks/User';
 
 const Header = (): React.ReactElement => {
-  const { white, textColor } = useTheme();
+  const { header, textColor } = useTheme();
 
   return (
-    <StyledHeader bgColor={white} color={textColor}>
+    <StyledHeader bgColor={header} color={textColor}>
       <InnerWrapper>
         <ThemeSwitcher />
         <User />

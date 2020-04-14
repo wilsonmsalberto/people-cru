@@ -13,6 +13,7 @@ export const StyledTable = styled.table`
   border-spacing: 0 1rem;
 
   tbody > tr {
+    height: 11rem;
     box-shadow: 0.6rem 0.6rem 5.4rem rgba(0, 0, 0, 0.05);
   }
 
@@ -23,7 +24,7 @@ export const StyledTable = styled.table`
   }
 
   td {
-    background-color: ${(props: StyledComponentProps): string => props.theme.primary};
+    background-color: ${(props: StyledComponentProps): string => props.theme.tableRow};
 
     &:first-of-type {
       border-top-left-radius: 1rem;
