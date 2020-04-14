@@ -18,7 +18,7 @@ export const StyledButton = styled(Button)`
   appearance: none;
   outline: none;
   ${(props: StyledComponentProps): string => `
-    box-shadow: 0px .6rem 1.2rem ${rgba(
+    box-shadow: 0 .6rem 1.2rem ${rgba(
       props.bgColor === 'transparent' ? '#ffffff' : props.bgColor,
       0.3
     )};

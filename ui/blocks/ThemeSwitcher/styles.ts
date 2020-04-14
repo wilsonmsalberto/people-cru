@@ -17,7 +17,7 @@ export const ThemeSwitcherButton = styled.button`
     width: 3rem;
     height: 3rem;
     position: relative;
-    top: 1px;
+    top: 0.1rem;
     fill: ${(props: StyledComponentProps): string => props.bgColor};
   }
 `;

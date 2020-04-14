@@ -1,4 +1,4 @@
-export const Globals = `
+const Globals = `
   /* Remove the margin in all browsers */
   html, body {
     height: 100%;
@@ -88,3 +88,11 @@ export const Globals = `
     list-style-type: none;
   }
 `;
+
+const PageWrapper = `
+  width: 100%;
+  max-width: 107.8rem;
+  margin: 0 auto;
+`;
+
+export { Globals, PageWrapper };

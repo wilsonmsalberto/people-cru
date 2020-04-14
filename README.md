@@ -48,7 +48,7 @@ instructions**
 Clone the project to your folder of choice
 
 ```bash
-git clone <repo>
+git clone git@github.com:wilsonmsalberto/people-cru.git
 ```
 
 Run the following lines in your terminal **while inside the project folder** in order to get/install

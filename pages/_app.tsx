@@ -15,7 +15,7 @@ import { AppThemeConsumer, AppThemeProvider } from 'context/AppTheme';
 import Header from 'ui/blocks/Header';
 
 // Styles
-import { Main } from './styles';
+import { Main, InnerWrapper } from './styles';
 
 const UserListApp: NextPage<AppProps> = ({
   Component,
@@ -40,7 +40,9 @@ const UserListApp: NextPage<AppProps> = ({
                 <Header />
 
                 <Main>
-                  <Component {...pageProps}></Component>
+                  <InnerWrapper>
+                    <Component {...pageProps}></Component>
+                  </InnerWrapper>
                 </Main>
 
                 <Global styles={css(GlobalStyles.Globals)} />
