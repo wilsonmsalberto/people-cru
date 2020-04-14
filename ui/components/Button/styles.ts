@@ -10,13 +10,17 @@ type StyledComponentProps = {
 };
 
 export const StyledButton = styled(Button)`
-  padding: 1.3rem 2.3rem;
+  position: relative;
+  height: 4.5rem;
+  padding: 0 2.3rem;
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 1.9rem;
   border-radius: 5rem;
   appearance: none;
   outline: none;
+  transition: 0.2s transform linear, 0.2s opacity linear;
+
   ${(props: StyledComponentProps): string => `
     box-shadow: 0 .6rem 1.2rem ${rgba(
       props.bgColor === 'transparent' ? '#ffffff' : props.bgColor,
@@ -29,6 +33,11 @@ export const StyledButton = styled(Button)`
     color: ${props.color || ''};
     background-color: ${props.bgColor || ''};
     `}
+
+  &:hover {
+    transform: translateY(0.2rem);
+    opacity: 0.85;
+  }
 `;
 
 export default StyledButton;

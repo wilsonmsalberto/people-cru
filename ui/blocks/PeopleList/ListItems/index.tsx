@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { PeopleListConsumer, PeopleListProvider } from 'context/PeopleList';
-import { Button } from 'ui/components/Button';
+import { ButtonCell, EditButton } from './styles';
 
 const ListItems = ({ peopleList }: { peopleList: Array<object> }): React.ReactElement => {
   return (
@@ -15,9 +15,9 @@ const ListItems = ({ peopleList }: { peopleList: Array<object> }): React.ReactEl
           <td>{person.job_title}</td>
           <td>{person.country}</td>
           <td>{person.salary}</td>
-          <td>
-            <Button btnStyle="secondary">Edit</Button>
-          </td>
+          <ButtonCell>
+            <EditButton btnStyle="secondary">Edit</EditButton>
+          </ButtonCell>
         </tr>
       ))}
     </tbody>

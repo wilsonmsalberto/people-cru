@@ -19,6 +19,14 @@ export const ThemeSwitcherButton = styled.button`
     position: relative;
     top: 0.1rem;
     fill: ${(props: StyledComponentProps): string => props.bgColor};
+    transition: 0.2s transform linear, 0.2s opacity linear;
+  }
+
+  &:hover {
+    svg {
+      transform: scale(1.1);
+      opacity: 0.85;
+    }
   }
 `;
 
