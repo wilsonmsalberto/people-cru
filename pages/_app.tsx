@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { NextPage } from 'next';
 import { AppProps } from 'next/app';
+import Head from 'next/head';
 
 // Theming
 import { ThemeProvider } from 'emotion-theming';
@@ -30,6 +31,12 @@ const UserListApp: NextPage<AppProps> = ({
           appThemeContext && (
             <ThemeProvider theme={appThemeContext.theme}>
               <ThemeWrapper>
+                <Head>
+                  <link
+                    href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap"
+                    rel="stylesheet"
+                  />
+                </Head>
                 <Header />
 
                 <Main>

@@ -5,22 +5,23 @@ const pallette = {
   'link-water': ' #F4F7FC',
   'prussian-blue': '#00234B',
   'royal-blue': '#624DE3',
-  mystic: '#EAEDF3',
-  zircon: '#F9FAFF',
   mercury: '#E5E5E5',
+  mystic: '#EAEDF3',
+  pippin: '#FFE8DF',
   white: '#FFFFFF',
+  zircon: '#F9FAFF',
 };
 
 const colors = {
-  white: pallette.white,
   background: pallette['link-water'],
   buttonBgColor: pallette['royal-blue'],
   buttonTextColor: pallette.zircon,
   default: pallette['blue-bayoux'],
   highlight: pallette['royal-blue'],
   primary: pallette['link-water'],
-  secondary: pallette['prussian-blue'],
+  secondary: pallette['bermuda-gray'],
   textColor: pallette['prussian-blue'],
+  ...pallette,
 };
 
 export default colors;

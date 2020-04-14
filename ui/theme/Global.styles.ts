@@ -10,7 +10,7 @@ export const Globals = `
     padding: 0;
     margin: 0;
     font-size: 1.6rem;
-    font-family: "Helvetica", sans-serif;
+    font-family: 'Inter', 'Helvetica', sans-serif;
     overflow-x: hidden;
     font-weight: normal;
     font-style: normal;
@@ -80,5 +80,11 @@ export const Globals = `
 
   h1, h2, h3 {
     margin: 0;
+  }
+
+  ul, li {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
   }
 `;

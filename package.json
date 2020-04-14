@@ -2,7 +2,7 @@
   "name": "people-list",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "",
+  "repository": "https://github.com/wilsonmsalberto/people-cru",
   "author": "Wilson Alberto <wilsonalberto@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -21,6 +21,7 @@
     "@emotion/styled": "^10.0.27",
     "@types/styled-components": "^5.0.1",
     "emotion": "^10.0.27",
+    "emotion-rgba": "^0.0.8",
     "emotion-server": "^10.0.27",
     "emotion-theming": "^10.0.27",
     "next": "^9.3.4",
