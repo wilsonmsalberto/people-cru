@@ -11,8 +11,9 @@ type StyledComponentProps = {
 
 export const StyledButton = styled(Button)`
   position: relative;
+  width: 18rem;
   height: 4.5rem;
-  padding: 0 2.3rem;
+  padding: 0;
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 1.9rem;

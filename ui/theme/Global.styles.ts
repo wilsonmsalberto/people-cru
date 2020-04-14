@@ -87,6 +87,12 @@ const Globals = `
   p {
     margin: 0;
   }
+
+  form, fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
 `;
 
 const PageWrapper = `

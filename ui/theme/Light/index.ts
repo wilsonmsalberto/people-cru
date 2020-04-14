@@ -17,12 +17,14 @@ const colors = {
   buttonBgColor: pallette['royal-blue'],
   buttonTextColor: pallette.zircon,
   default: pallette['blue-bayoux'],
+  header: pallette.white,
   highlight: pallette['royal-blue'],
   primary: pallette['link-water'],
   secondary: pallette['bermuda-gray'],
-  textColor: pallette['prussian-blue'],
+  separator: pallette.mystic,
+  tableFooter: pallette.zircon,
   tableRow: pallette.white,
-  header: pallette.white,
+  textColor: pallette['prussian-blue'],
   ...pallette,
 };
 

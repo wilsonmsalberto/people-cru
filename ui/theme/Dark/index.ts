@@ -5,21 +5,23 @@ const pallette = {
   charcoal: '#3C4858',
   clouds: '#ecf0f1',
   gunmetal: '#273444',
-  zircon: '#F9FAFF',
   white: '#FFFFFF',
+  zircon: '#F9FAFF',
 };
 
 const colors = {
-  secondary: pallette.clouds,
-  primary: pallette.charcoal,
-  default: pallette.gunmetal,
   background: pallette['yankees-blue'],
-  textColor: pallette.clouds,
   buttonBgColor: pallette['royal-blue'],
   buttonTextColor: pallette.zircon,
-  highlight: pallette['royal-blue'],
-  tableRow: pallette['gray-blue'],
+  default: pallette.gunmetal,
   header: pallette.charcoal,
+  highlight: pallette['royal-blue'],
+  primary: pallette.charcoal,
+  secondary: pallette.clouds,
+  separator: pallette.zircon,
+  tableFooter: pallette.zircon,
+  tableRow: pallette['gray-blue'],
+  textColor: pallette.clouds,
   ...pallette,
 };
 

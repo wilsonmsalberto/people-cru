@@ -1,4 +1,5 @@
 import React from 'react';
+import { useRouter } from 'next/router';
 
 import { Wrapper, TitleWrapper, Title, SubTitle } from './styles';
 
@@ -8,6 +9,10 @@ import Button from 'ui/components/Button';
 import PeopleList from 'ui/blocks/PeopleList/index';
 
 const Home = ({ resultsAmount }: { resultsAmount: number }): React.ReactElement => {
+  const router = useRouter();
+
+  const handleAddNewClick = (): Promise<any> => router.push('/new');
+
   return (
     <>
       <Wrapper>
@@ -16,7 +21,7 @@ const Home = ({ resultsAmount }: { resultsAmount: number }): React.ReactElement 
           <SubTitle>{resultsAmount} employees</SubTitle>
         </TitleWrapper>
 
-        <Button btnStyle="primary" type="submit">
+        <Button btnStyle="primary" type="submit" onClick={handleAddNewClick}>
           Add employee
         </Button>
       </Wrapper>

@@ -40,7 +40,7 @@ export const ButtonCell = styled.td`
 `;
 
 export const EditButton = styled(Button)`
-  min-width: 14rem;
+  width: 14.5rem;
   height: 4rem;
   background-color: ${(props: StyledComponentProps): string => props.theme.white};
 `;
