@@ -4,27 +4,33 @@ export type ButtonProps = {
   children: React.ReactElement | string;
   className?: string;
   onClick?: Function;
+  onSubmit?: Function;
   type?: 'button' | 'submit' | 'reset';
 };
 
 export const Button: SFC<ButtonProps> = ({
   children,
   onClick,
+  onSubmit,
   className,
   type = 'button',
 }): React.ReactElement => {
-  const handleOnClick = (event?: MouseEvent): void => {
+  const handleOnClick = (event: React.MouseEvent<HTMLButtonElement>): void => {
     if (event) {
       event.preventDefault();
     }
 
-    if (!onClick) return;
+    if (type === 'submit' && onSubmit) {
+      onSubmit();
+    }
 
-    onClick();
+    if (onClick) {
+      onClick();
+    }
   };
 
   return (
-    <button className={className} onClick={(): void => handleOnClick()} type={type}>
+    <button className={className} onClick={handleOnClick} onSubmit={handleOnClick} type={type}>
       {children}
     </button>
   );

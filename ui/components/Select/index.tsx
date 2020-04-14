@@ -1,14 +1,59 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-export const Select = ({ options }: { options: Array<string> }): React.ReactElement => {
+import { SelectInnerWrapper, SelectWrapper } from './styles';
+
+export const Select = ({
+  hint = '',
+  id,
+  label,
+  options,
+  value = 'DEFAULT',
+  onChange,
+}: {
+  hint?: string;
+  id: string;
+  label: string;
+  options: Array<string>;
+  value?: string;
+  onChange: Function;
+}): React.ReactElement => {
+  const [selectValue, setValue] = useState(value);
+  const [isFocused, setActive] = useState(false);
+
+  const handleChange = (event: React.ChangeEvent<HTMLSelectElement>): void => {
+    setValue(event.target.value);
+    onChange(id, event.target.value);
+  };
+
+  useEffect(() => {
+    if (value) {
+      setValue(value);
+    }
+  }, [value, setValue]);
+
   return (
-    <select>
-      {options.map((country, idx) => (
-        <option key={idx} value={country}>
-          {country}
-        </option>
-      ))}
-    </select>
+    <SelectWrapper isFocused={isFocused}>
+      <label htmlFor={id}>{label}</label>
+      <SelectInnerWrapper>
+        <select
+          id={id}
+          onChange={handleChange}
+          onFocus={(): void => setActive(true)}
+          onBlur={(): void => setActive(false)}
+          value={selectValue}
+        >
+          <option value="DEFAULT" disabled hidden>
+            Select their Country
+          </option>
+          {options.map((country, idx) => (
+            <option key={idx} value={country}>
+              {country}
+            </option>
+          ))}
+        </select>
+      </SelectInnerWrapper>
+      {hint && <span>{hint}</span>}
+    </SelectWrapper>
   );
 };
 

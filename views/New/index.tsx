@@ -1,23 +1,10 @@
 import React from 'react';
-import { useRouter } from 'next/router';
 
 import PersonForm from 'ui/blocks/PersonForm';
 
-import {
-  FormFooter,
-  FormInnerWrapper,
-  SubTitle,
-  SubmitButton,
-  Title,
-  TitleWrapper,
-  Wrapper,
-} from './styles';
+import { SubTitle, Title, TitleWrapper, Wrapper } from './styles';
 
 const NewPerson = (): React.ReactElement => {
-  const router = useRouter();
-
-  const handleCancelClick = (): Promise<any> => router.push('/');
-
   return (
     <>
       <Wrapper>
@@ -26,19 +13,7 @@ const NewPerson = (): React.ReactElement => {
           <SubTitle>Fill out the information of your new employee</SubTitle>
         </TitleWrapper>
 
-        <form>
-          <FormInnerWrapper>
-            <PersonForm />
-          </FormInnerWrapper>
-          <FormFooter>
-            <SubmitButton btnStyle="secondary" onClick={handleCancelClick}>
-              Cancel
-            </SubmitButton>
-            <SubmitButton btnStyle="primary" type="submit">
-              Add employee
-            </SubmitButton>
-          </FormFooter>
-        </form>
+        <PersonForm submitText="Add employee" />
       </Wrapper>
     </>
   );
