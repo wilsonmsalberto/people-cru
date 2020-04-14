@@ -5,6 +5,7 @@ type StyledComponentProps = {
 };
 
 export const Wrapper = styled.section`
+  margin-top: 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;

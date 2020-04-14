@@ -20,6 +20,7 @@ export const TitleWrapper = styled.div`
 `;
 
 export const Title = styled.h1`
+  margin-bottom: 0.6rem;
   font-weight: 500;
   font-size: 2.2rem;
   line-height: 2.7rem;

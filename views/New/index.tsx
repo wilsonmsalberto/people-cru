@@ -1,6 +1,8 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 
+import PersonForm from 'ui/blocks/PersonForm';
+
 import {
   FormFooter,
   FormInnerWrapper,
@@ -26,7 +28,7 @@ const NewPerson = (): React.ReactElement => {
 
         <form>
           <FormInnerWrapper>
-            <input />
+            <PersonForm />
           </FormInnerWrapper>
           <FormFooter>
             <SubmitButton btnStyle="secondary" onClick={handleCancelClick}>
