@@ -15,7 +15,7 @@ import { AppThemeContext, AppThemeProvider } from 'context/AppTheme';
 import Header from 'ui/blocks/Header';
 
 // Styles
-import { Main, InnerWrapper } from './styles';
+import { Main, InnerWrapper } from 'ui/theme/Global.styles';
 
 const App = ({ Component, pageProps }: AppProps): React.ReactElement => {
   const { theme } = useContext(AppThemeContext);

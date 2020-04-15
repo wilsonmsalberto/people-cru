@@ -1,3 +1,5 @@
+import styled from '@emotion/styled';
+
 const Globals = `
   /* Remove the margin in all browsers */
   html, body {
@@ -101,4 +103,12 @@ const PageWrapper = `
   margin: 0 auto;
 `;
 
-export { Globals, PageWrapper };
+const Main = styled.main`
+  padding: 0 2rem;
+`;
+
+const InnerWrapper = styled.div`
+  ${PageWrapper}
+`;
+
+export { Globals, PageWrapper, Main, InnerWrapper };

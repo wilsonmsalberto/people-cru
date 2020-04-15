@@ -87,6 +87,17 @@ If you wish to change/develop the tests and have them update dynamically you sho
 yarn test:watch
 ```
 
+## Test a production build locally
+
+```bash
+yarn prod
+```
+
+Similarly to `yarn dev` this will prepare a production ready build and run it in
+[http://localhost:3000](http://localhost:3000)
+
+This command may also be used for deployment purposes, in a service such as Zeit or Netlify
+
 ### Developer Log
 
 - Data Source - [Mockaroo](https://www.mockaroo.com/)

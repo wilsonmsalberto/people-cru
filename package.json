@@ -6,6 +6,7 @@
   "author": "Wilson Alberto <wilsonalberto@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "prod": "npm run build && npm run start",
     "build": "next build",
     "dev": "next",
     "eslint:fix": "npm run lint:eslint -- --fix",
