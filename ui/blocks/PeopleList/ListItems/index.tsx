@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useRouter } from 'next/router';
 
-import { PeopleListConsumer, PeopleListProvider } from 'context/PeopleList';
+import { PeopleListContext, PeopleListProvider } from 'context/PeopleList';
 import { PersonLine, PersonName, PersonBirth, ButtonCell, EditButton, SalaryCell } from './styles';
 
-const ListItems = ({ peopleList }: { peopleList: Array<object> }): React.ReactElement => {
+const ListItems = (): React.ReactElement => {
+  const { peopleList } = useContext(PeopleListContext);
+
   const router = useRouter();
 
   const handleEditClick = (id: number): void => {
@@ -35,13 +37,9 @@ const ListItems = ({ peopleList }: { peopleList: Array<object> }): React.ReactEl
   );
 };
 
-const withContextListItems = (props: Record<string, any>): React.ReactElement => (
+const withContextListItems = (): React.ReactElement => (
   <PeopleListProvider>
-    <PeopleListConsumer>
-      {(peopleListContext): React.ReactNode | null =>
-        peopleListContext && <ListItems peopleList={peopleListContext.peopleList} {...props} />
-      }
-    </PeopleListConsumer>
+    <ListItems />
   </PeopleListProvider>
 );
 

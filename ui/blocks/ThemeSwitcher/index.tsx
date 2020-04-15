@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useTheme } from 'emotion-theming';
 
 // Context
-import { AppThemeConsumer } from 'context/AppTheme';
+import { AppThemeContext } from 'context/AppTheme';
 
 // Components
 import { ContrastIcon } from 'ui/components/SvgIcons';
@@ -10,7 +10,9 @@ import { ContrastIcon } from 'ui/components/SvgIcons';
 // Styles
 import { ThemeSwitcherButton } from './styles';
 
-const ThemeSwitcher = ({ switchTheme }: { switchTheme: Function }): React.ReactElement => {
+const ThemeSwitcher = (): React.ReactElement => {
+  const { switchTheme } = useContext(AppThemeContext);
+
   const { buttonBgColor, buttonTextColor } = useTheme();
 
   return (
@@ -23,13 +25,4 @@ const ThemeSwitcher = ({ switchTheme }: { switchTheme: Function }): React.ReactE
     </ThemeSwitcherButton>
   );
 };
-
-const withContextThemeSwitcher = (props: Record<string, any>): React.ReactElement => (
-  <AppThemeConsumer>
-    {(appThemeContext): React.ReactNode | null =>
-      appThemeContext && <ThemeSwitcher switchTheme={appThemeContext.switchTheme} {...props} />
-    }
-  </AppThemeConsumer>
-);
-
-export default withContextThemeSwitcher;
+export default ThemeSwitcher;

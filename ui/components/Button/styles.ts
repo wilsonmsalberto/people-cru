@@ -24,11 +24,11 @@ export const StyledButton = styled(Button)`
 
   ${(props: StyledComponentProps): string => `
     box-shadow: 0 .6rem 1.2rem ${rgba(
-      props.bgColor === 'transparent' ? '#ffffff' : props.bgColor,
+      props.bgColor === 'transparent' ? '#ffffff' : props.bgColor || '#ffffff',
       0.3
     )};
     border: 2px solid ${rgba(
-      props.borderColor === 'transparent' ? '#ffffff' : props.borderColor,
+      props.borderColor === 'transparent' ? '#ffffff' : props.borderColor || '#ffffff',
       0.3
     )};
     color: ${props.color || ''};

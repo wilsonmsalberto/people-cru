@@ -5,10 +5,11 @@
     "plugin:prettier/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:jest-dom/recommended"
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["babel", "@typescript-eslint", "prettier", "react", "react-hooks"],
+  "plugins": ["babel", "@typescript-eslint", "prettier", "react", "react-hooks", "jest-dom"],
   "parserOptions": {
     "project": "./tsconfig.json",
     "ecmaFeatures": {

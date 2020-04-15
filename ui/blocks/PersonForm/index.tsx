@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useRouter } from 'next/router';
 
 import { Select } from 'ui/components/Select';
@@ -6,21 +6,17 @@ import { Input } from 'ui/components/Input';
 
 import countries from './countries.json';
 
-import { PeopleListConsumer, PeopleListProvider } from 'context/PeopleList';
+import { PeopleListContext, PeopleListProvider } from 'context/PeopleList';
 
 import { FormFooter, FormInnerWrapper, SubmitButton } from './styles';
 
-const PersonForm = ({
-  addNewPerson,
-  activePerson = {},
-  submitText,
-  updatePerson,
-}: {
-  addNewPerson: Function;
+type PersonFormInterface = {
   activePerson?: Record<string, any>;
   submitText: string;
-  updatePerson: Function;
-}): React.ReactElement => {
+};
+
+const PersonForm = ({ activePerson = {}, submitText }: PersonFormInterface): React.ReactElement => {
+  const { updatePerson, addNewPerson } = useContext(PeopleListContext);
   const router = useRouter();
 
   const defaultValues = {
@@ -113,20 +109,9 @@ const PersonForm = ({
   );
 };
 
-const withContextPersonForm = (props: Record<string, any>): React.ReactElement => (
+const withContextPersonForm = (props: PersonFormInterface): React.ReactElement => (
   <PeopleListProvider>
-    <PeopleListConsumer>
-      {(peopleListContext): React.ReactNode | null =>
-        peopleListContext && (
-          <PersonForm
-            updatePerson={peopleListContext.updatePerson}
-            addNewPerson={peopleListContext.addNewPerson}
-            submitText={props.submitText}
-            activePerson={props.activePerson}
-          />
-        )
-      }
-    </PeopleListConsumer>
+    <PersonForm {...props} />
   </PeopleListProvider>
 );
 

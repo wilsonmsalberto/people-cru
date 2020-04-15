@@ -19,6 +19,8 @@ This app is brought to you by all of these lovely software projects:
 
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
+- [Jest](https://jestjs.io/)
+- [Testing Library](https://testing-library.com/)
 
 ### Others
 
@@ -70,6 +72,20 @@ This will run your project in development mode and it will be running in
 [http://localhost:3000](http://localhost:3000)
 
 Any changes you make will automatically build and refresh the page thus reflecting your changes.
+
+## Run tests for the application
+
+```bash
+yarn test
+```
+
+This will run the tests that are currently written for your application
+
+If you wish to change/develop the tests and have them update dynamically you should run
+
+```bash
+yarn test:watch
+```
 
 ### Developer Log
 

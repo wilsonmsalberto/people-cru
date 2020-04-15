@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useRouter } from 'next/router';
 
 import PersonForm from 'ui/blocks/PersonForm';
 
-import { PeopleListConsumer, PeopleListProvider } from 'context/PeopleList';
+import { PeopleListContext, PeopleListProvider } from 'context/PeopleList';
 
 import { SubTitle, Title, TitleWrapper, Wrapper } from './styles';
 
-const NewPerson = ({ peopleList }: { peopleList: Array<object> }): React.ReactElement => {
+const NewPerson = (): React.ReactElement => {
+  const { peopleList } = useContext(PeopleListContext);
   const router = useRouter();
   const { id } = router.query;
 
@@ -30,11 +31,7 @@ const NewPerson = ({ peopleList }: { peopleList: Array<object> }): React.ReactEl
 
 const withContextNewPerson = (): React.ReactElement => (
   <PeopleListProvider>
-    <PeopleListConsumer>
-      {(peopleListContext): React.ReactNode | null =>
-        peopleListContext && <NewPerson peopleList={peopleListContext.peopleList} />
-      }
-    </PeopleListConsumer>
+    <NewPerson />
   </PeopleListProvider>
 );
 

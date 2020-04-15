@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useRouter } from 'next/router';
 
 import { Wrapper, TitleWrapper, Title, SubTitle } from './styles';
 
-import { PeopleListProvider, PeopleListConsumer } from 'context/PeopleList';
+import { PeopleListContext, PeopleListProvider } from 'context/PeopleList';
 
 import Button from 'ui/components/Button';
 import PeopleList from 'ui/blocks/PeopleList/index';
 
-const Home = ({ resultsAmount }: { resultsAmount: number }): React.ReactElement => {
+const Home = (): React.ReactElement => {
+  const { resultsAmount } = useContext(PeopleListContext);
   const router = useRouter();
 
   const handleAddNewClick = (): Promise<any> => router.push('/new');
@@ -30,13 +31,9 @@ const Home = ({ resultsAmount }: { resultsAmount: number }): React.ReactElement 
   );
 };
 
-const withContextHome = (props: Record<string, any>): React.ReactElement => (
+const withContextHome = (): React.ReactElement => (
   <PeopleListProvider>
-    <PeopleListConsumer>
-      {(peopleListContext): React.ReactNode | null =>
-        peopleListContext && <Home resultsAmount={peopleListContext.resultsAmount} {...props} />
-      }
-    </PeopleListConsumer>
+    <Home />
   </PeopleListProvider>
 );
 

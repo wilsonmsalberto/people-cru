@@ -8,9 +8,8 @@ export interface ThemeContextInterface {
   theme: Record<string, any>;
 }
 
-const { Provider, Consumer } = createContext<ThemeContextInterface | null>(null);
-
-export const AppThemeConsumer = Consumer;
+export const AppThemeContext = createContext({} as ThemeContextInterface);
+const { Provider } = AppThemeContext;
 
 export const AppThemeProvider = ({
   children,
