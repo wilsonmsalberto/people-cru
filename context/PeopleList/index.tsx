@@ -20,7 +20,9 @@ export interface PeopleListContextInterface {
   setResultsAmount: Function;
 }
 export const PeopleListContext = createContext({} as PeopleListContextInterface);
-const { Provider } = PeopleListContext;
+const { Consumer, Provider } = PeopleListContext;
+
+export const PeopleListConsumer = Consumer;
 
 export const PeopleListProvider = ({
   children,
