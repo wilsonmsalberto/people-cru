@@ -16,7 +16,7 @@ describe('PeopleListConsumer', () => {
       expect(getByText('Dummy')).toBeTruthy();
     });
 
-    it('should render with a list of people', () => {
+    it('should render with a provider', () => {
       const { getByText } = render(ProviderElement);
       expect(getByText('Dummy')).toBeTruthy();
     });

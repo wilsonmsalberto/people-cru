@@ -100,4 +100,25 @@ This command may also be used for deployment purposes, in a service such as Zeit
 
 ### Developer Log
 
+#### Resources
+
 - Data Source - [Mockaroo](https://www.mockaroo.com/)
+
+#### Developments
+
+- Use of React Context to separate data concerns
+- Use of theming with Styled Components (Emotionjs) to easily switch themes if needed
+- Creation of small components that are reusable
+- Creation of block components that aggregate some logic and data handling
+- Some accessiblity and semantic concerns were applied
+- Use of ESLint, Prettier and EditorConfig to have a consistent set of code standards
+
+#### Improvements
+
+- People form should validate each field upon submission for specific formats and content types
+- Unit tests should meet the minimum coverage set as default
+- Dark mode should be more visually balanced
+- Page transitions could help smooth the understanding of success/failure
+- Success/failure errors or warnings should be informed to the user
+- Could have used a simple REST Api to get data and handle loadings
+- Updated users should be focused after a successful edit
