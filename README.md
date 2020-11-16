@@ -18,7 +18,7 @@ This app is brought to you by all of these lovely software projects:
 ### Testing & Code Quality
 
 - [ESLint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
+- [StyleLint](https://stylelint.io/)
 - [Jest](https://jestjs.io/)
 - [Testing Library](https://testing-library.com/)
 
@@ -40,7 +40,7 @@ Tested and working on Mac OSX 10.15.3 (Catalina):
 
 | Software                        | Version  |
 | ------------------------------- | -------- |
-| [Yarn.js](https://yarnpkg.com/) | 1.17.3 + |
+| [Yarn.js](https://yarnpkg.com/) | 1.22.10 + |
 
 **You can install yarn from npm with `npm install -g yarn` but make sure to follow the website's
 instructions**
@@ -111,7 +111,7 @@ This command may also be used for deployment purposes, in a service such as Zeit
 - Creation of small components that are reusable
 - Creation of block components that aggregate some logic and data handling
 - Some accessiblity and semantic concerns were applied
-- Use of ESLint, Prettier and EditorConfig to have a consistent set of code standards
+- Use of ESLint, StyleLint and EditorConfig to have a consistent set of code standards
 
 #### Improvements
 
