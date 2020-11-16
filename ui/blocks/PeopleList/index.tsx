@@ -5,13 +5,11 @@ import ListItems from './ListItems';
 
 import StyledTable from './styles';
 
-const PeopleList = (): React.ReactElement => {
-  return (
+const PeopleList = (): React.ReactElement => (
     <StyledTable>
-      <ListHeader />
-      <ListItems />
+        <ListHeader />
+        <ListItems />
     </StyledTable>
-  );
-};
+);
 
 export default PeopleList;

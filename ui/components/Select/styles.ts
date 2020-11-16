@@ -12,9 +12,9 @@ export const SelectWrapper = styled.div`
     display: block;
     width: 100%;
     color: ${(props: StyledComponentProps): string => {
-      const { isFocused, theme } = props;
+        const { isFocused, theme } = props;
 
-      return isFocused ? theme.highlight : theme.secondary;
+        return isFocused ? theme.highlight : theme.secondary;
     }};
 
     transition: 0.3s color linear;
@@ -59,12 +59,12 @@ export const SelectInnerWrapper = styled.div`
     background: none;
     border: 0;
     border-radius: 0;
-    border-bottom: 1px solid
+    border-bottom: .1rem solid
       ${(props: StyledComponentProps): string => {
         const { isFocused, theme } = props;
 
         return isFocused ? theme.highlight : theme.textColor;
-      }};
+    }};
 
     transition: 0.3s border linear;
   }

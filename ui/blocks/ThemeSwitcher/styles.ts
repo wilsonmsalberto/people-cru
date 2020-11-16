@@ -6,6 +6,9 @@ type StyledComponentProps = {
 };
 
 export const ThemeSwitcherButton = styled.button`
+  display: flex;
+  width: 4rem;
+  height: 4rem;
   padding: 0.5rem;
   border-radius: 0.5rem;
   border: 0;
@@ -14,8 +17,6 @@ export const ThemeSwitcherButton = styled.button`
   background-color: transparent;
 
   svg {
-    width: 3rem;
-    height: 3rem;
     position: relative;
     top: 0.1rem;
     fill: ${(props: StyledComponentProps): string => props.bgColor};
@@ -29,5 +30,3 @@ export const ThemeSwitcherButton = styled.button`
     }
   }
 `;
-
-export default ThemeSwitcherButton;

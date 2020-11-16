@@ -2,29 +2,223 @@
 
 exports[`Edit Page Rendering should render properly 1`] = `
 <DocumentFragment>
-  <section
-    class="css-p7cj8y"
+  .emotion-0 {
+  margin-top: 4rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0.6rem 0.6rem 5.4rem rgba(0, 0, 0, 0.05);
+  background-color: ;
+}
+
+.emotion-2 {
+  padding: 3.6rem;
+  border-bottom: .1rem solid;
+}
+
+.emotion-4 {
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+  font-size: 2.2rem;
+  line-height: 2.7rem;
+}
+
+.emotion-6 {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  color: ;
+}
+
+.emotion-8 {
+  padding: 5rem;
+}
+
+@media only screen and (min-width: 1024px) {
+  .emotion-8 {
+    padding: 4.8rem 10rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .emotion-8 {
+    padding: 4.8rem 24rem;
+  }
+}
+
+.emotion-10 {
+  margin-bottom: 3rem;
+}
+
+.emotion-10 label {
+  display: block;
+  width: 100%;
+  color: ;
+  -webkit-transition: 0.3s color linear;
+  transition: 0.3s color linear;
+}
+
+.emotion-10 input {
+  display: block;
+  width: 100%;
+  outline: 0;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  padding: 0.8rem 0;
+  background: transparent;
+  border: 0;
+  border-bottom: .1rem solid;
+  -webkit-transition: 0.3s border linear;
+  transition: 0.3s border linear;
+}
+
+.emotion-10 input::-webkit-input-placeholder {
+  color: ;
+}
+
+.emotion-10 input::-moz-placeholder {
+  color: ;
+}
+
+.emotion-10 input:-ms-input-placeholder {
+  color: ;
+}
+
+.emotion-10 input::placeholder {
+  color: ;
+}
+
+.emotion-10 span {
+  display: block;
+  margin-top: 0.8rem;
+  width: 100%;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  color: ;
+  -webkit-transition: 0.3s color linear;
+  transition: 0.3s color linear;
+}
+
+.emotion-16 {
+  margin-bottom: 3rem;
+}
+
+.emotion-16 label {
+  display: block;
+  width: 100%;
+  color: ;
+  -webkit-transition: 0.3s color linear;
+  transition: 0.3s color linear;
+}
+
+.emotion-16 span {
+  display: block;
+  margin-top: 0.8rem;
+  width: 100%;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  color: ;
+  -webkit-transition: 0.3s color linear;
+  transition: 0.3s color linear;
+}
+
+.emotion-18 {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.emotion-18:before {
+  content: '⌄';
+  display: block;
+  position: absolute;
+  font-size: 2.5rem;
+  right: 0.4rem;
+  bottom: 0.7rem;
+  pointer-events: none;
+  z-index: 1;
+  color: ;
+}
+
+.emotion-18 select {
+  display: block;
+  width: 100%;
+  outline: 0;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  padding: 0.8rem 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  border-bottom: .1rem solid;
+  -webkit-transition: 0.3s border linear;
+  transition: 0.3s border linear;
+}
+
+.emotion-22 {
+  padding: 3.6rem 0;
+  text-align: center;
+  background-color: ;
+}
+
+.emotion-25 {
+  position: relative;
+  width: 18rem;
+  height: 4.5rem;
+  padding: 0;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  border-radius: 5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: none;
+  -webkit-transition: 0.2s -webkit-transform linear,0.2s opacity linear;
+  transition: 0.2s transform linear,0.2s opacity linear;
+  box-shadow: 0 .6rem 1.2rem rgba(255,255,255,0.3);
+  border: .2rem solid rgba(255,255,255,0.3);
+  color: ;
+  background-color: ;
+  width: 14.5rem;
+  margin: 0 0.8rem;
+  box-shadow: none;
+}
+
+.emotion-25:hover {
+  -webkit-transform: translateY(0.2rem);
+  -moz-transform: translateY(0.2rem);
+  -ms-transform: translateY(0.2rem);
+  transform: translateY(0.2rem);
+  opacity: 0.85;
+}
+
+<section
+    class="emotion-0 emotion-1"
   >
     <div
-      class="css-2lunc9"
+      class="emotion-2 emotion-3"
     >
       <h1
-        class="css-1g2rnju"
+        class="emotion-4 emotion-5"
       >
         Edit employee
       </h1>
       <span
-        class="css-1tvovr2"
+        class="emotion-6 emotion-7"
       >
         Edit the information of your employee
       </span>
     </div>
     <form>
       <fieldset
-        class="css-v13m9r"
+        class="emotion-8 emotion-9"
       >
         <div
-          class="css-fsck6u"
+          class="emotion-10 emotion-11"
         >
           <label
             for="name"
@@ -42,7 +236,7 @@ exports[`Edit Page Rendering should render properly 1`] = `
           </span>
         </div>
         <div
-          class="css-fsck6u"
+          class="emotion-10 emotion-11"
         >
           <label
             for="birthDate"
@@ -60,7 +254,7 @@ exports[`Edit Page Rendering should render properly 1`] = `
           </span>
         </div>
         <div
-          class="css-fsck6u"
+          class="emotion-10 emotion-11"
         >
           <label
             for="job"
@@ -78,7 +272,7 @@ exports[`Edit Page Rendering should render properly 1`] = `
           </span>
         </div>
         <div
-          class="css-1383itu"
+          class="emotion-16 emotion-17"
         >
           <label
             for="country"
@@ -86,7 +280,7 @@ exports[`Edit Page Rendering should render properly 1`] = `
             Country
           </label>
           <div
-            class="css-5zrwfr"
+            class="emotion-18 emotion-19"
           >
             <select
               id="country"
@@ -1350,7 +1544,7 @@ exports[`Edit Page Rendering should render properly 1`] = `
           </span>
         </div>
         <div
-          class="css-fsck6u"
+          class="emotion-10 emotion-11"
         >
           <label
             for="salary"
@@ -1369,16 +1563,16 @@ exports[`Edit Page Rendering should render properly 1`] = `
         </div>
       </fieldset>
       <fieldset
-        class="css-1w1h6zs"
+        class="emotion-22 emotion-23"
       >
         <button
-          class="css-1uoc2nl"
+          class="emotion-24 emotion-25 emotion-26"
           type="button"
         >
           Cancel
         </button>
         <button
-          class="css-1uoc2nl"
+          class="emotion-24 emotion-25 emotion-26"
           type="submit"
         >
           Save

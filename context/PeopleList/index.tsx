@@ -25,66 +25,66 @@ const { Consumer, Provider } = PeopleListContext;
 export const PeopleListConsumer = Consumer;
 
 export const PeopleListProvider = ({
-  children,
+    children,
 }: {
   children: React.ReactNode;
 }): React.ReactElement => {
-  const [peopleList, setPeopleList] = useState(data);
-  const [resultsAmount, setResultsAmount] = useState(data.length);
+    const [ peopleList, setPeopleList ] = useState(data);
+    const [ resultsAmount, setResultsAmount ] = useState(data.length);
 
-  const handleSetPeopleList = useCallback((list: Array<Person>) => {
-    setPeopleList(list);
-    localStorage.setItem('personList', JSON.stringify(list));
-  }, []);
+    const handleSetPeopleList = useCallback((list: Array<Person>) => {
+        setPeopleList(list);
+        localStorage.setItem('personList', JSON.stringify(list));
+    }, []);
 
-  const updatePerson = (personDetails: Person): void => {
-    const { id } = personDetails;
+    const updatePerson = (personDetails: Person): void => {
+        const { id } = personDetails;
 
-    const existingPersonIndex = peopleList.findIndex((person) => person.id === id);
+        const existingPersonIndex = peopleList.findIndex((person) => person.id === id);
 
-    const newPersonList: Array<Person> = [...peopleList];
+        const newPersonList: Array<Person> = [ ...peopleList ];
 
-    newPersonList[existingPersonIndex] = personDetails;
+        newPersonList[existingPersonIndex] = personDetails;
 
-    handleSetPeopleList(newPersonList);
-  };
-
-  const addNewPerson = (personDetails: Record<string, any>): void => {
-    const newIndex = peopleList.length + 1;
-
-    const newPerson: Person = {
-      id: newIndex,
-      name: personDetails.name,
-      birthDate: personDetails.birthDate,
-      job: personDetails.job,
-      country: personDetails.country,
-      salary: personDetails.salary,
+        handleSetPeopleList(newPersonList);
     };
 
-    const newPersonList: Array<Person> = [...peopleList, newPerson];
+    const addNewPerson = (personDetails: Record<string, any>): void => {
+        const newIndex = peopleList.length + 1;
 
-    handleSetPeopleList(newPersonList);
-  };
+        const newPerson: Person = {
+            id       : newIndex,
+            name     : personDetails.name,
+            birthDate: personDetails.birthDate,
+            job      : personDetails.job,
+            country  : personDetails.country,
+            salary   : personDetails.salary,
+        };
 
-  useEffect(() => {
-    const list = localStorage.getItem('personList');
-    const storedData = list ? JSON.parse(list) : data;
+        const newPersonList: Array<Person> = [ ...peopleList, newPerson ];
 
-    handleSetPeopleList(storedData);
-  }, [handleSetPeopleList]);
+        handleSetPeopleList(newPersonList);
+    };
 
-  return (
-    <Provider
-      value={{
-        addNewPerson,
-        updatePerson,
-        peopleList,
-        resultsAmount,
-        setPeopleList,
-        setResultsAmount,
-      }}
-    >
-      {children}
-    </Provider>
-  );
+    useEffect(() => {
+        const list = localStorage.getItem('personList');
+        const storedData = list ? JSON.parse(list) : data;
+
+        handleSetPeopleList(storedData);
+    }, [ handleSetPeopleList ]);
+
+    return (
+        <Provider
+            value={ {
+                addNewPerson,
+                updatePerson,
+                peopleList,
+                resultsAmount,
+                setPeopleList,
+                setResultsAmount,
+            } }
+        >
+            { children }
+        </Provider>
+    );
 };

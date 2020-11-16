@@ -2,35 +2,215 @@
 
 exports[`Home Page Rendering should render properly 1`] = `
 <DocumentFragment>
-  <section
-    class="css-11s1md0"
+  .emotion-0 {
+  margin-top: 4rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+}
+
+.emotion-4 {
+  margin-right: 0.8rem;
+  font-weight: 500;
+  font-size: 2.6rem;
+  line-height: 3.1rem;
+}
+
+.emotion-6 {
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 2.1rem;
+  color: ;
+}
+
+.emotion-8 {
+  position: relative;
+  width: 18rem;
+  height: 4.5rem;
+  padding: 0;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  border-radius: 5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: none;
+  -webkit-transition: 0.2s -webkit-transform linear,0.2s opacity linear;
+  transition: 0.2s transform linear,0.2s opacity linear;
+  box-shadow: 0 .6rem 1.2rem rgba(255,255,255,0.3);
+  border: .2rem solid rgba(255,255,255,0.3);
+  color: ;
+  background-color: ;
+}
+
+.emotion-8:hover {
+  -webkit-transform: translateY(0.2rem);
+  -moz-transform: translateY(0.2rem);
+  -ms-transform: translateY(0.2rem);
+  transform: translateY(0.2rem);
+  opacity: 0.85;
+}
+
+<section
+    class="emotion-0 emotion-1"
   >
     <div
-      class="css-6fqrth"
+      class="emotion-2 emotion-3"
     >
       <h1
-        class="css-16i1488"
+        class="emotion-4 emotion-5"
       >
         People
       </h1>
       <span
-        class="css-9lpvpw"
+        class="emotion-6 emotion-7"
       >
         20 employees
       </span>
     </div>
     <button
-      class="css-1f5124n"
+      class="emotion-8 emotion-9"
       type="submit"
     >
       Add employee
     </button>
   </section>
-  <table
-    class="css-148mg3b"
+  .emotion-0 {
+  border: none;
+  border-collapse: separate;
+  width: 100%;
+  margin-top: 5.6rem;
+  text-align: left;
+  border-spacing: 0 1rem;
+}
+
+.emotion-0 tbody>tr {
+  height: 11rem;
+  box-shadow: 0.6rem 0.6rem 5.4rem rgba(0, 0, 0, 0.05);
+}
+
+.emotion-0 th,
+.emotion-0 td {
+  border: 0;
+  padding-left: 2.6rem;
+}
+
+.emotion-0 td {
+  background-color: ;
+}
+
+.emotion-0 td:first-of-type {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.emotion-0 td:last-of-type {
+  padding-right: 2.6rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.emotion-2 th {
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  color: ;
+}
+
+.emotion-4 {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  color: ;
+}
+
+.emotion-6 {
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+  color: ;
+}
+
+.emotion-8 {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  color: ;
+}
+
+.emotion-10 span {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  margin-left: 0.4rem;
+  color: ;
+}
+
+.emotion-12 {
+  text-align: right;
+}
+
+.emotion-15 {
+  position: relative;
+  width: 18rem;
+  height: 4.5rem;
+  padding: 0;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  border-radius: 5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: none;
+  -webkit-transition: 0.2s -webkit-transform linear,0.2s opacity linear;
+  transition: 0.2s transform linear,0.2s opacity linear;
+  box-shadow: 0 .6rem 1.2rem rgba(255,255,255,0.3);
+  border: .2rem solid rgba(255,255,255,0.3);
+  color: ;
+  background-color: ;
+  width: 14.5rem;
+  height: 4rem;
+  background-color: ;
+}
+
+.emotion-15:hover {
+  -webkit-transform: translateY(0.2rem);
+  -moz-transform: translateY(0.2rem);
+  -ms-transform: translateY(0.2rem);
+  transform: translateY(0.2rem);
+  opacity: 0.85;
+}
+
+<table
+    class="emotion-0 emotion-1"
   >
     <thead
-      class="css-1kse8ce"
+      class="emotion-2 emotion-3"
     >
       <tr>
         <th>
@@ -51,16 +231,16 @@ exports[`Home Page Rendering should render properly 1`] = `
     </thead>
     <tbody>
       <tr
-        class="css-1iaf3li"
+        class="emotion-4 emotion-5"
       >
         <td>
           <p
-            class="css-vdtd8u"
+            class="emotion-6 emotion-7"
           >
             Justin Colvill
           </p>
           <span
-            class="css-1tvovr2"
+            class="emotion-8 emotion-9"
           >
             03/11/1938
           </span>
@@ -72,7 +252,7 @@ exports[`Home Page Rendering should render properly 1`] = `
           Greece
         </td>
         <td
-          class="css-epn6zh"
+          class="emotion-10 emotion-11"
         >
           €2181,66 
           <span>
@@ -80,10 +260,10 @@ exports[`Home Page Rendering should render properly 1`] = `
           </span>
         </td>
         <td
-          class="css-889chh"
+          class="emotion-12 emotion-13"
         >
           <button
-            class="css-1fa7ku2"
+            class="emotion-14 emotion-15 emotion-16"
             type="button"
           >
             Edit
@@ -91,16 +271,16 @@ exports[`Home Page Rendering should render properly 1`] = `
         </td>
       </tr>
       <tr
-        class="css-1iaf3li"
+        class="emotion-4 emotion-5"
       >
         <td>
           <p
-            class="css-vdtd8u"
+            class="emotion-6 emotion-7"
           >
             Ranique Bern
           </p>
           <span
-            class="css-1tvovr2"
+            class="emotion-8 emotion-9"
           >
             07/10/1941
           </span>
@@ -112,7 +292,7 @@ exports[`Home Page Rendering should render properly 1`] = `
           China
         </td>
         <td
-          class="css-epn6zh"
+          class="emotion-10 emotion-11"
         >
           €1686,04 
           <span>
@@ -120,10 +300,10 @@ exports[`Home Page Rendering should render properly 1`] = `
           </span>
         </td>
         <td
-          class="css-889chh"
+          class="emotion-12 emotion-13"
         >
           <button
-            class="css-1fa7ku2"
+            class="emotion-14 emotion-15 emotion-16"
             type="button"
           >
             Edit
@@ -131,16 +311,16 @@ exports[`Home Page Rendering should render properly 1`] = `
         </td>
       </tr>
       <tr
-        class="css-1iaf3li"
+        class="emotion-4 emotion-5"
       >
         <td>
           <p
-            class="css-vdtd8u"
+            class="emotion-6 emotion-7"
           >
             Vonnie Allix
           </p>
           <span
-            class="css-1tvovr2"
+            class="emotion-8 emotion-9"
           >
             07/06/1925
           </span>
@@ -152,7 +332,7 @@ exports[`Home Page Rendering should render properly 1`] = `
           Indonesia
         </td>
         <td
-          class="css-epn6zh"
+          class="emotion-10 emotion-11"
         >
           €1024,96 
           <span>
@@ -160,10 +340,10 @@ exports[`Home Page Rendering should render properly 1`] = `
           </span>
         </td>
         <td
-          class="css-889chh"
+          class="emotion-12 emotion-13"
         >
           <button
-            class="css-1fa7ku2"
+            class="emotion-14 emotion-15 emotion-16"
             type="button"
           >
             Edit
@@ -171,16 +351,16 @@ exports[`Home Page Rendering should render properly 1`] = `
         </td>
       </tr>
       <tr
-        class="css-1iaf3li"
+        class="emotion-4 emotion-5"
       >
         <td>
           <p
-            class="css-vdtd8u"
+            class="emotion-6 emotion-7"
           >
             Abagael Thames
           </p>
           <span
-            class="css-1tvovr2"
+            class="emotion-8 emotion-9"
           >
             19/04/1928
           </span>
@@ -192,7 +372,7 @@ exports[`Home Page Rendering should render properly 1`] = `
           China
         </td>
         <td
-          class="css-epn6zh"
+          class="emotion-10 emotion-11"
         >
           €1452,00 
           <span>
@@ -200,10 +380,10 @@ exports[`Home Page Rendering should render properly 1`] = `
           </span>
         </td>
         <td
-          class="css-889chh"
+          class="emotion-12 emotion-13"
         >
           <button
-            class="css-1fa7ku2"
+            class="emotion-14 emotion-15 emotion-16"
             type="button"
           >
             Edit
@@ -211,16 +391,16 @@ exports[`Home Page Rendering should render properly 1`] = `
         </td>
       </tr>
       <tr
-        class="css-1iaf3li"
+        class="emotion-4 emotion-5"
       >
         <td>
           <p
-            class="css-vdtd8u"
+            class="emotion-6 emotion-7"
           >
             Berkeley Hurdwell
           </p>
           <span
-            class="css-1tvovr2"
+            class="emotion-8 emotion-9"
           >
             07/03/1924
           </span>
@@ -232,7 +412,7 @@ exports[`Home Page Rendering should render properly 1`] = `
           Indonesia
         </td>
         <td
-          class="css-epn6zh"
+          class="emotion-10 emotion-11"
         >
           €2208,47 
           <span>
@@ -240,10 +420,10 @@ exports[`Home Page Rendering should render properly 1`] = `
           </span>
         </td>
         <td
-          class="css-889chh"
+          class="emotion-12 emotion-13"
         >
           <button
-            class="css-1fa7ku2"
+            class="emotion-14 emotion-15 emotion-16"
             type="button"
           >
             Edit
@@ -251,16 +431,16 @@ exports[`Home Page Rendering should render properly 1`] = `
         </td>
       </tr>
       <tr
-        class="css-1iaf3li"
+        class="emotion-4 emotion-5"
       >
         <td>
           <p
-            class="css-vdtd8u"
+            class="emotion-6 emotion-7"
           >
             Osborne Sutherby
           </p>
           <span
-            class="css-1tvovr2"
+            class="emotion-8 emotion-9"
           >
             17/01/1921
           </span>
@@ -272,7 +452,7 @@ exports[`Home Page Rendering should render properly 1`] = `
           France
         </td>
         <td
-          class="css-epn6zh"
+          class="emotion-10 emotion-11"
         >
           €4058,49 
           <span>
@@ -280,10 +460,10 @@ exports[`Home Page Rendering should render properly 1`] = `
           </span>
         </td>
         <td
-          class="css-889chh"
+          class="emotion-12 emotion-13"
         >
           <button
-            class="css-1fa7ku2"
+            class="emotion-14 emotion-15 emotion-16"
             type="button"
           >
             Edit
@@ -291,16 +471,16 @@ exports[`Home Page Rendering should render properly 1`] = `
         </td>
       </tr>
       <tr
-        class="css-1iaf3li"
+        class="emotion-4 emotion-5"
       >
         <td>
           <p
-            class="css-vdtd8u"
+            class="emotion-6 emotion-7"
           >
             Adelina Dymott
           </p>
           <span
-            class="css-1tvovr2"
+            class="emotion-8 emotion-9"
           >
             17/06/1922
           </span>
@@ -312,7 +492,7 @@ exports[`Home Page Rendering should render properly 1`] = `
           Serbia
         </td>
         <td
-          class="css-epn6zh"
+          class="emotion-10 emotion-11"
         >
           €4576,20 
           <span>
@@ -320,10 +500,10 @@ exports[`Home Page Rendering should render properly 1`] = `
           </span>
         </td>
         <td
-          class="css-889chh"
+          class="emotion-12 emotion-13"
         >
           <button
-            class="css-1fa7ku2"
+            class="emotion-14 emotion-15 emotion-16"
             type="button"
           >
             Edit
@@ -331,16 +511,16 @@ exports[`Home Page Rendering should render properly 1`] = `
         </td>
       </tr>
       <tr
-        class="css-1iaf3li"
+        class="emotion-4 emotion-5"
       >
         <td>
           <p
-            class="css-vdtd8u"
+            class="emotion-6 emotion-7"
           >
             Almeta Hazeley
           </p>
           <span
-            class="css-1tvovr2"
+            class="emotion-8 emotion-9"
           >
             16/05/1941
           </span>
@@ -352,7 +532,7 @@ exports[`Home Page Rendering should render properly 1`] = `
           Indonesia
         </td>
         <td
-          class="css-epn6zh"
+          class="emotion-10 emotion-11"
         >
           €1458,96 
           <span>
@@ -360,10 +540,10 @@ exports[`Home Page Rendering should render properly 1`] = `
           </span>
         </td>
         <td
-          class="css-889chh"
+          class="emotion-12 emotion-13"
         >
           <button
-            class="css-1fa7ku2"
+            class="emotion-14 emotion-15 emotion-16"
             type="button"
           >
             Edit
@@ -371,16 +551,16 @@ exports[`Home Page Rendering should render properly 1`] = `
         </td>
       </tr>
       <tr
-        class="css-1iaf3li"
+        class="emotion-4 emotion-5"
       >
         <td>
           <p
-            class="css-vdtd8u"
+            class="emotion-6 emotion-7"
           >
             Beth Briereton
           </p>
           <span
-            class="css-1tvovr2"
+            class="emotion-8 emotion-9"
           >
             01/10/1927
           </span>
@@ -392,7 +572,7 @@ exports[`Home Page Rendering should render properly 1`] = `
           Pakistan
         </td>
         <td
-          class="css-epn6zh"
+          class="emotion-10 emotion-11"
         >
           €3035,36 
           <span>
@@ -400,10 +580,10 @@ exports[`Home Page Rendering should render properly 1`] = `
           </span>
         </td>
         <td
-          class="css-889chh"
+          class="emotion-12 emotion-13"
         >
           <button
-            class="css-1fa7ku2"
+            class="emotion-14 emotion-15 emotion-16"
             type="button"
           >
             Edit
@@ -411,16 +591,16 @@ exports[`Home Page Rendering should render properly 1`] = `
         </td>
       </tr>
       <tr
-        class="css-1iaf3li"
+        class="emotion-4 emotion-5"
       >
         <td>
           <p
-            class="css-vdtd8u"
+            class="emotion-6 emotion-7"
           >
             Garfield Ten
           </p>
           <span
-            class="css-1tvovr2"
+            class="emotion-8 emotion-9"
           >
             15/05/1926
           </span>
@@ -432,7 +612,7 @@ exports[`Home Page Rendering should render properly 1`] = `
           Indonesia
         </td>
         <td
-          class="css-epn6zh"
+          class="emotion-10 emotion-11"
         >
           €3046,85 
           <span>
@@ -440,10 +620,10 @@ exports[`Home Page Rendering should render properly 1`] = `
           </span>
         </td>
         <td
-          class="css-889chh"
+          class="emotion-12 emotion-13"
         >
           <button
-            class="css-1fa7ku2"
+            class="emotion-14 emotion-15 emotion-16"
             type="button"
           >
             Edit
@@ -451,16 +631,16 @@ exports[`Home Page Rendering should render properly 1`] = `
         </td>
       </tr>
       <tr
-        class="css-1iaf3li"
+        class="emotion-4 emotion-5"
       >
         <td>
           <p
-            class="css-vdtd8u"
+            class="emotion-6 emotion-7"
           >
             Byrann Lippo
           </p>
           <span
-            class="css-1tvovr2"
+            class="emotion-8 emotion-9"
           >
             27/12/1932
           </span>
@@ -472,7 +652,7 @@ exports[`Home Page Rendering should render properly 1`] = `
           Croatia
         </td>
         <td
-          class="css-epn6zh"
+          class="emotion-10 emotion-11"
         >
           €3224,58 
           <span>
@@ -480,10 +660,10 @@ exports[`Home Page Rendering should render properly 1`] = `
           </span>
         </td>
         <td
-          class="css-889chh"
+          class="emotion-12 emotion-13"
         >
           <button
-            class="css-1fa7ku2"
+            class="emotion-14 emotion-15 emotion-16"
             type="button"
           >
             Edit
@@ -491,16 +671,16 @@ exports[`Home Page Rendering should render properly 1`] = `
         </td>
       </tr>
       <tr
-        class="css-1iaf3li"
+        class="emotion-4 emotion-5"
       >
         <td>
           <p
-            class="css-vdtd8u"
+            class="emotion-6 emotion-7"
           >
             Shina Woosnam
           </p>
           <span
-            class="css-1tvovr2"
+            class="emotion-8 emotion-9"
           >
             25/01/1934
           </span>
@@ -512,7 +692,7 @@ exports[`Home Page Rendering should render properly 1`] = `
           Peru
         </td>
         <td
-          class="css-epn6zh"
+          class="emotion-10 emotion-11"
         >
           €3262,01 
           <span>
@@ -520,10 +700,10 @@ exports[`Home Page Rendering should render properly 1`] = `
           </span>
         </td>
         <td
-          class="css-889chh"
+          class="emotion-12 emotion-13"
         >
           <button
-            class="css-1fa7ku2"
+            class="emotion-14 emotion-15 emotion-16"
             type="button"
           >
             Edit
@@ -531,16 +711,16 @@ exports[`Home Page Rendering should render properly 1`] = `
         </td>
       </tr>
       <tr
-        class="css-1iaf3li"
+        class="emotion-4 emotion-5"
       >
         <td>
           <p
-            class="css-vdtd8u"
+            class="emotion-6 emotion-7"
           >
             Joann Iacovazzi
           </p>
           <span
-            class="css-1tvovr2"
+            class="emotion-8 emotion-9"
           >
             27/04/1943
           </span>
@@ -552,7 +732,7 @@ exports[`Home Page Rendering should render properly 1`] = `
           Indonesia
         </td>
         <td
-          class="css-epn6zh"
+          class="emotion-10 emotion-11"
         >
           €3234,48 
           <span>
@@ -560,10 +740,10 @@ exports[`Home Page Rendering should render properly 1`] = `
           </span>
         </td>
         <td
-          class="css-889chh"
+          class="emotion-12 emotion-13"
         >
           <button
-            class="css-1fa7ku2"
+            class="emotion-14 emotion-15 emotion-16"
             type="button"
           >
             Edit
@@ -571,16 +751,16 @@ exports[`Home Page Rendering should render properly 1`] = `
         </td>
       </tr>
       <tr
-        class="css-1iaf3li"
+        class="emotion-4 emotion-5"
       >
         <td>
           <p
-            class="css-vdtd8u"
+            class="emotion-6 emotion-7"
           >
             Elisabet De
           </p>
           <span
-            class="css-1tvovr2"
+            class="emotion-8 emotion-9"
           >
             03/04/1941
           </span>
@@ -592,7 +772,7 @@ exports[`Home Page Rendering should render properly 1`] = `
           Poland
         </td>
         <td
-          class="css-epn6zh"
+          class="emotion-10 emotion-11"
         >
           €2075,11 
           <span>
@@ -600,10 +780,10 @@ exports[`Home Page Rendering should render properly 1`] = `
           </span>
         </td>
         <td
-          class="css-889chh"
+          class="emotion-12 emotion-13"
         >
           <button
-            class="css-1fa7ku2"
+            class="emotion-14 emotion-15 emotion-16"
             type="button"
           >
             Edit
@@ -611,16 +791,16 @@ exports[`Home Page Rendering should render properly 1`] = `
         </td>
       </tr>
       <tr
-        class="css-1iaf3li"
+        class="emotion-4 emotion-5"
       >
         <td>
           <p
-            class="css-vdtd8u"
+            class="emotion-6 emotion-7"
           >
             Kenny Attwoull
           </p>
           <span
-            class="css-1tvovr2"
+            class="emotion-8 emotion-9"
           >
             16/02/1940
           </span>
@@ -632,7 +812,7 @@ exports[`Home Page Rendering should render properly 1`] = `
           China
         </td>
         <td
-          class="css-epn6zh"
+          class="emotion-10 emotion-11"
         >
           €4741,50 
           <span>
@@ -640,10 +820,10 @@ exports[`Home Page Rendering should render properly 1`] = `
           </span>
         </td>
         <td
-          class="css-889chh"
+          class="emotion-12 emotion-13"
         >
           <button
-            class="css-1fa7ku2"
+            class="emotion-14 emotion-15 emotion-16"
             type="button"
           >
             Edit
@@ -651,16 +831,16 @@ exports[`Home Page Rendering should render properly 1`] = `
         </td>
       </tr>
       <tr
-        class="css-1iaf3li"
+        class="emotion-4 emotion-5"
       >
         <td>
           <p
-            class="css-vdtd8u"
+            class="emotion-6 emotion-7"
           >
             Ralf Mockett
           </p>
           <span
-            class="css-1tvovr2"
+            class="emotion-8 emotion-9"
           >
             27/11/1948
           </span>
@@ -672,7 +852,7 @@ exports[`Home Page Rendering should render properly 1`] = `
           China
         </td>
         <td
-          class="css-epn6zh"
+          class="emotion-10 emotion-11"
         >
           €1327,68 
           <span>
@@ -680,10 +860,10 @@ exports[`Home Page Rendering should render properly 1`] = `
           </span>
         </td>
         <td
-          class="css-889chh"
+          class="emotion-12 emotion-13"
         >
           <button
-            class="css-1fa7ku2"
+            class="emotion-14 emotion-15 emotion-16"
             type="button"
           >
             Edit
@@ -691,16 +871,16 @@ exports[`Home Page Rendering should render properly 1`] = `
         </td>
       </tr>
       <tr
-        class="css-1iaf3li"
+        class="emotion-4 emotion-5"
       >
         <td>
           <p
-            class="css-vdtd8u"
+            class="emotion-6 emotion-7"
           >
             Gun Kittles
           </p>
           <span
-            class="css-1tvovr2"
+            class="emotion-8 emotion-9"
           >
             05/03/1926
           </span>
@@ -712,7 +892,7 @@ exports[`Home Page Rendering should render properly 1`] = `
           Portugal
         </td>
         <td
-          class="css-epn6zh"
+          class="emotion-10 emotion-11"
         >
           €4442,08 
           <span>
@@ -720,10 +900,10 @@ exports[`Home Page Rendering should render properly 1`] = `
           </span>
         </td>
         <td
-          class="css-889chh"
+          class="emotion-12 emotion-13"
         >
           <button
-            class="css-1fa7ku2"
+            class="emotion-14 emotion-15 emotion-16"
             type="button"
           >
             Edit
@@ -731,16 +911,16 @@ exports[`Home Page Rendering should render properly 1`] = `
         </td>
       </tr>
       <tr
-        class="css-1iaf3li"
+        class="emotion-4 emotion-5"
       >
         <td>
           <p
-            class="css-vdtd8u"
+            class="emotion-6 emotion-7"
           >
             Viviene Ponde
           </p>
           <span
-            class="css-1tvovr2"
+            class="emotion-8 emotion-9"
           >
             05/02/1929
           </span>
@@ -752,7 +932,7 @@ exports[`Home Page Rendering should render properly 1`] = `
           Ukraine
         </td>
         <td
-          class="css-epn6zh"
+          class="emotion-10 emotion-11"
         >
           €2386,21 
           <span>
@@ -760,10 +940,10 @@ exports[`Home Page Rendering should render properly 1`] = `
           </span>
         </td>
         <td
-          class="css-889chh"
+          class="emotion-12 emotion-13"
         >
           <button
-            class="css-1fa7ku2"
+            class="emotion-14 emotion-15 emotion-16"
             type="button"
           >
             Edit
@@ -771,16 +951,16 @@ exports[`Home Page Rendering should render properly 1`] = `
         </td>
       </tr>
       <tr
-        class="css-1iaf3li"
+        class="emotion-4 emotion-5"
       >
         <td>
           <p
-            class="css-vdtd8u"
+            class="emotion-6 emotion-7"
           >
             Audi Ashbrook
           </p>
           <span
-            class="css-1tvovr2"
+            class="emotion-8 emotion-9"
           >
             23/02/1936
           </span>
@@ -792,7 +972,7 @@ exports[`Home Page Rendering should render properly 1`] = `
           Indonesia
         </td>
         <td
-          class="css-epn6zh"
+          class="emotion-10 emotion-11"
         >
           €3346,58 
           <span>
@@ -800,10 +980,10 @@ exports[`Home Page Rendering should render properly 1`] = `
           </span>
         </td>
         <td
-          class="css-889chh"
+          class="emotion-12 emotion-13"
         >
           <button
-            class="css-1fa7ku2"
+            class="emotion-14 emotion-15 emotion-16"
             type="button"
           >
             Edit
@@ -811,16 +991,16 @@ exports[`Home Page Rendering should render properly 1`] = `
         </td>
       </tr>
       <tr
-        class="css-1iaf3li"
+        class="emotion-4 emotion-5"
       >
         <td>
           <p
-            class="css-vdtd8u"
+            class="emotion-6 emotion-7"
           >
             Durand Depport
           </p>
           <span
-            class="css-1tvovr2"
+            class="emotion-8 emotion-9"
           >
             25/09/1927
           </span>
@@ -832,7 +1012,7 @@ exports[`Home Page Rendering should render properly 1`] = `
           Bulgaria
         </td>
         <td
-          class="css-epn6zh"
+          class="emotion-10 emotion-11"
         >
           €1518,80 
           <span>
@@ -840,10 +1020,10 @@ exports[`Home Page Rendering should render properly 1`] = `
           </span>
         </td>
         <td
-          class="css-889chh"
+          class="emotion-12 emotion-13"
         >
           <button
-            class="css-1fa7ku2"
+            class="emotion-14 emotion-15 emotion-16"
             type="button"
           >
             Edit

@@ -1,5 +1,5 @@
 import React, { SFC } from 'react';
-import { useTheme } from 'emotion-theming';
+import { useTheme } from '@emotion/react';
 
 import StyledButton from './styles';
 
@@ -10,34 +10,34 @@ interface StyledProps extends ButtonProps {
 }
 
 export const Button: SFC<StyledProps> = ({
-  btnStyle = 'primary',
-  ...props
+    btnStyle = 'primary',
+    ...props
 }): React.ReactElement => {
-  const { buttonBgColor, buttonTextColor } = useTheme();
+    const { buttonBgColor, buttonTextColor } = useTheme();
 
-  const buttonTypes = {
-    primary: {
-      color: buttonTextColor,
-      bgColor: buttonBgColor,
-      borderColor: buttonBgColor,
-    },
-    secondary: {
-      color: buttonBgColor,
-      bgColor: buttonTextColor,
-      borderColor: buttonBgColor,
-    },
-  };
+    const buttonTypes = {
+        primary: {
+            color      : buttonTextColor,
+            bgColor    : buttonBgColor,
+            borderColor: buttonBgColor,
+        },
+        secondary: {
+            color      : buttonBgColor,
+            bgColor    : buttonTextColor,
+            borderColor: buttonBgColor,
+        },
+    };
 
-  const selectedStyle = buttonTypes[btnStyle];
+    const selectedStyle = buttonTypes[btnStyle];
 
-  return (
-    <StyledButton
-      borderColor={selectedStyle.borderColor}
-      bgColor={selectedStyle.bgColor}
-      color={selectedStyle.color}
-      {...props}
-    />
-  );
+    return (
+        <StyledButton
+            borderColor={ selectedStyle.borderColor }
+            bgColor={ selectedStyle.bgColor }
+            color={ selectedStyle.color }
+            { ...props }
+        />
+    );
 };
 
 export default Button;

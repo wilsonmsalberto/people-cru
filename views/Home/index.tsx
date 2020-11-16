@@ -1,40 +1,44 @@
 import React, { useContext } from 'react';
 import { useRouter } from 'next/router';
 
-import { Wrapper, TitleWrapper, Title, SubTitle } from './styles';
-
 import { PeopleListContext, PeopleListProvider } from 'context/PeopleList';
 
 import Button from 'ui/components/Button';
 import PeopleList from 'ui/blocks/PeopleList/index';
 
+import { SubTitle, Title, TitleWrapper, Wrapper } from './styles';
+
 const Home = (): React.ReactElement => {
-  const { resultsAmount } = useContext(PeopleListContext);
-  const router = useRouter();
+    const { resultsAmount } = useContext(PeopleListContext);
+    const router = useRouter();
 
-  const handleAddNewClick = (): Promise<any> => router.push('/new');
+    const handleAddNewClick = (): Promise<any> => router.push('/new');
 
-  return (
-    <>
-      <Wrapper>
-        <TitleWrapper>
-          <Title>People</Title>
-          <SubTitle>{resultsAmount} employees</SubTitle>
-        </TitleWrapper>
+    return (
+        <>
+            <Wrapper>
+                <TitleWrapper>
+                    <Title>People</Title>
+                    <SubTitle>{ resultsAmount } employees</SubTitle>
+                </TitleWrapper>
 
-        <Button btnStyle="primary" type="submit" onClick={handleAddNewClick}>
-          Add employee
-        </Button>
-      </Wrapper>
-      <PeopleList />
-    </>
-  );
+                <Button
+                    btnStyle="primary"
+                    type="submit"
+                    onClick={ handleAddNewClick }
+                >
+                    Add employee
+                </Button>
+            </Wrapper>
+            <PeopleList />
+        </>
+    );
 };
 
 const withContextHome = (): React.ReactElement => (
-  <PeopleListProvider>
-    <Home />
-  </PeopleListProvider>
+    <PeopleListProvider>
+        <Home />
+    </PeopleListProvider>
 );
 
 export default withContextHome;

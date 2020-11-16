@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { rgba } from 'emotion-rgba';
+import { rgba } from 'polished';
 
 import { Button } from './Button';
 
@@ -24,12 +24,12 @@ export const StyledButton = styled(Button)`
 
   ${(props: StyledComponentProps): string => `
     box-shadow: 0 .6rem 1.2rem ${rgba(
-      props.bgColor === 'transparent' ? '#ffffff' : props.bgColor || '#ffffff',
-      0.3
+        props.bgColor === 'transparent' ? '#ffffff' : props.bgColor || '#ffffff',
+        0.3
     )};
-    border: 2px solid ${rgba(
-      props.borderColor === 'transparent' ? '#ffffff' : props.borderColor || '#ffffff',
-      0.3
+    border: .2rem solid ${rgba(
+        props.borderColor === 'transparent' ? '#ffffff' : props.borderColor || '#ffffff',
+        0.3
     )};
     color: ${props.color || ''};
     background-color: ${props.bgColor || ''};

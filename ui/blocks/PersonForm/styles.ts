@@ -8,6 +8,7 @@ type StyledComponentProps = {
 export const FormInnerWrapper = styled.fieldset`
   padding: 5rem;
 
+  /* stylelint-disable unit-allowed-list */
   @media only screen and (min-width: 1024px) {
     padding: 4.8rem 10rem;
   }

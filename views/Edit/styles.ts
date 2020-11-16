@@ -14,7 +14,7 @@ export const Wrapper = styled.section`
 
 export const TitleWrapper = styled.div`
   padding: 3.6rem;
-  border-bottom: 1px solid ${(props: StyledComponentProps): string => props.theme.separator};
+  border-bottom: .1rem solid ${(props: StyledComponentProps): string => props.theme.separator};
 `;
 
 export const Title = styled.h1`

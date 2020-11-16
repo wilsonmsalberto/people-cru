@@ -9,31 +9,36 @@ export type ButtonProps = {
 };
 
 export const Button: SFC<ButtonProps> = ({
-  children,
-  onClick,
-  onSubmit,
-  className,
-  type = 'button',
+    children,
+    className,
+    onClick,
+    onSubmit,
+    type = 'button',
 }): React.ReactElement => {
-  const handleOnClick = (event: React.MouseEvent<HTMLButtonElement>): void => {
-    if (event) {
-      event.preventDefault();
-    }
+    const handleOnClick = (event: React.MouseEvent<HTMLButtonElement>): void => {
+        if (event) {
+            event.preventDefault();
+        }
 
-    if (type === 'submit' && onSubmit) {
-      onSubmit();
-    }
+        if (type === 'submit' && onSubmit) {
+            onSubmit();
+        }
 
-    if (onClick) {
-      onClick();
-    }
-  };
+        if (onClick) {
+            onClick();
+        }
+    };
 
-  return (
-    <button className={className} onClick={handleOnClick} onSubmit={handleOnClick} type={type}>
-      {children}
-    </button>
-  );
+    return (
+        <button
+            className={ className }
+            onClick={ handleOnClick }
+            onSubmit={ handleOnClick }
+            type={ type }
+        >
+            { children }
+        </button>
+    );
 };
 
 export default Button;
