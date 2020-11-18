@@ -15,7 +15,7 @@ export const Select = ({
   label: string;
   options: Array<string>;
   value?: string;
-  onChange: Function;
+  onChange: (number, string) => void;
 }): React.ReactElement => {
     const [ selectValue, setValue ] = useState(value);
     const [ isFocused, setActive ] = useState(false);

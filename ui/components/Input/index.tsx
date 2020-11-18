@@ -17,7 +17,7 @@ export const Input = ({
   placeholder?: string;
   type?: string;
   value?: string;
-  onChange: Function;
+  onChange: (number, string) => void;
 }): React.ReactElement => {
     const [ inputValue, setValue ] = useState(value);
     const [ isFocused, setActive ] = useState(false);
