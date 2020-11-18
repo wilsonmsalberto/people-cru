@@ -6,10 +6,12 @@
       "module-resolver", {
         "root" : [ "." ],
         "alias": {
+          "mocks": ["__mocks__"],
           "context": ["context"],
           "pages": ["pages"],
           "ui": ["ui"],
-          "views": ["views"]
+          "views": ["views"],
+          "utils": ["utils"]
         }
       } 
     ]

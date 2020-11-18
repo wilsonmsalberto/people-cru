@@ -32,6 +32,7 @@
       "es6": true
   },
   "rules": {
+      "@typescript-eslint/no-empty-interface": "off",
       "jsdoc/check-param-names": 1,
       "jsdoc/check-syntax": 1,
       "jsdoc/check-tag-names": 1,
@@ -247,7 +248,6 @@
           }
       ],
       "react/button-has-type": "warn",
-      "react/default-props-match-prop-types": "error",
       "react/jsx-curly-spacing": [
           2,
           {
@@ -263,17 +263,8 @@
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
       "react/display-name": 0,
-      "react/jsx-max-props-per-line": [2, { "maximum": 1 }],
-      "react/jsx-first-prop-new-line": [2, "multiline"],
       "react/jsx-closing-tag-location": 2,
       "react/jsx-indent": ["error", 4],
-      "react/sort-prop-types": [ "error", {
-          "callbacksLast": true,
-          "ignoreCase": true,
-          "requiredFirst": false,
-          "sortShapeProp": true,
-          "noSortAlphabetically": false
-        }],
       "jsx-a11y/anchor-is-valid": [ "error", {
           "components": [ "Link" ],
           "specialLink": [ "hrefLeft", "hrefRight" ],

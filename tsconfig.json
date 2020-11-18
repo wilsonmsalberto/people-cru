@@ -19,9 +19,11 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "paths": {
+      "mocks/*": ["__mocks__/*"],
       "context/*": ["context/*"],
       "pages/*": ["pages/*"],
       "ui/*": ["ui/*"],
+      "utils/*": ["utils/*"],
       "views/*": ["views/*"],
     }
   },

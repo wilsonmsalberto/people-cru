@@ -1,4 +1,4 @@
-import React, { SFC } from 'react';
+import React from 'react';
 import { useTheme } from '@emotion/react';
 
 import StyledButton from './styles';
@@ -9,10 +9,10 @@ interface StyledProps extends ButtonProps {
   btnStyle?: 'primary' | 'secondary';
 }
 
-export const Button: SFC<StyledProps> = ({
+export const Button = ({
     btnStyle = 'primary',
     ...props
-}): React.ReactElement => {
+}: StyledProps): React.ReactElement => {
     const { buttonBgColor, buttonTextColor } = useTheme();
 
     const buttonTypes = {

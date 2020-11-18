@@ -1,20 +1,20 @@
-import React, { SFC } from 'react';
+import React from 'react';
 
 export type ButtonProps = {
   children: React.ReactElement | string;
   className?: string;
-  onClick?: Function;
-  onSubmit?: Function;
+  onClick?: () => void;
+  onSubmit?: () => void;
   type?: 'button' | 'submit' | 'reset';
 };
 
-export const Button: SFC<ButtonProps> = ({
+export const Button = ({
     children,
     className,
     onClick,
     onSubmit,
     type = 'button',
-}): React.ReactElement => {
+}: ButtonProps): React.ReactElement => {
     const handleOnClick = (event: React.MouseEvent<HTMLButtonElement>): void => {
         if (event) {
             event.preventDefault();
@@ -31,10 +31,9 @@ export const Button: SFC<ButtonProps> = ({
 
     return (
         <button
-            className={ className }
             onClick={ handleOnClick }
             onSubmit={ handleOnClick }
-            type={ type }
+            { ...{ type, className } }
         >
             { children }
         </button>

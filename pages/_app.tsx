@@ -41,10 +41,10 @@ const App = ({ Component, pageProps }: AppProps): React.ReactElement => {
     );
 };
 
-const withProvidersApp = (props: AppProps): React.ReactElement => (
+const withThemeApp = (props: AppProps): React.ReactElement => (
     <AppThemeProvider>
         <App { ...props } />
     </AppThemeProvider>
 );
 
-export default withProvidersApp;
+export default withThemeApp;

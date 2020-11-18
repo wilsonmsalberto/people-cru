@@ -5,16 +5,16 @@ const Wrapper = ({ children }: { children: React.ReactNode }): React.ReactElemen
     const { background, textColor } = useTheme();
 
     const bodyStyles = `
-    body {
-        color: ${textColor};
-        background-color: ${background}
-    }
-  `;
+        body {
+            color: ${textColor};
+            background-color: ${background}
+        }
+    `;
 
     return (
         <div>
-            { children }
             <Global styles={ css(bodyStyles) } />
+            { children }
         </div>
     );
 };
