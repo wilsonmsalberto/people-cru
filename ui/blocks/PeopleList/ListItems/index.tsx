@@ -30,10 +30,7 @@ const ListItems = (): React.ReactElement => {
                         { person.salary } <span>per month</span>
                     </SalaryCell>
                     <ButtonCell>
-                        <EditButton
-                            onClick={ (): void => handleEditClick(person.id) }
-                            btnStyle="secondary"
-                        >
+                        <EditButton variant="secondary" onClick={ (): void => handleEditClick(person.id) }>
                             Edit
                         </EditButton>
                     </ButtonCell>

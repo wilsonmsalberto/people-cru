@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 type StyledComponentProps = {
   bgColor?: string;
   color?: string;
+  theme: Record<string, any>;
 };
 
 export const User = styled.aside`
@@ -20,19 +21,19 @@ export const UserImage = styled.div`
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
-  background-color: ${(props: StyledComponentProps): string => props.bgColor || ''};
+  background-color: ${({ bgColor, theme }: StyledComponentProps) => bgColor || theme.bgColor};
 `;
 
 export const UserName = styled.h2`
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 1.9rem;
-  color: ${(props: StyledComponentProps): string => props.color || ''};
+  color: ${({ color, theme }: StyledComponentProps) => color || theme.color};
 `;
 
 export const UserRole = styled.h3`
   font-weight: 500;
   font-size: 1.3rem;
   line-height: 1.6rem;
-  color: ${(props: StyledComponentProps): string => props.color || ''};
+  color: ${({ color, theme }: StyledComponentProps) => color || theme.color};
 `;

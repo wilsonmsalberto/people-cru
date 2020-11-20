@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 type StyledComponentProps = {
-  theme: Record<any, string>;
+  theme: Record<string, any>;
   isFocused: boolean;
 };
 
@@ -11,11 +11,7 @@ export const InputWrapper = styled.div`
   label {
     display: block;
     width: 100%;
-    color: ${(props: StyledComponentProps): string => {
-        const { isFocused, theme } = props;
-
-        return isFocused ? theme.highlight : theme.secondary;
-    }};
+    color: ${({ isFocused, theme }: StyledComponentProps) => isFocused ? theme.highlight : theme.secondary};
 
     transition: 0.3s color linear;
   }
@@ -29,17 +25,12 @@ export const InputWrapper = styled.div`
     padding: 0.8rem 0;
     background: transparent;
     border: 0;
-    border-bottom: .1rem solid
-      ${(props: StyledComponentProps): string => {
-        const { isFocused, theme } = props;
-
-        return isFocused ? theme.highlight : theme.textColor;
-    }};
+    border-bottom: .1rem solid ${({ isFocused, theme }: StyledComponentProps) => isFocused ? theme.highlight : theme.textColor};
 
     transition: 0.3s border linear;
 
     &::placeholder {
-      color: ${(props: StyledComponentProps): string => props.theme.secondary};
+      color: ${({ theme }) => theme.secondary};
     }
   }
 
@@ -49,7 +40,7 @@ export const InputWrapper = styled.div`
     width: 100%;
     font-size: 1.3rem;
     line-height: 1.6rem;
-    color: ${(props: StyledComponentProps): string => props.theme.secondary};
+    color: ${({ theme }) => theme.secondary};
     transition: 0.3s color linear;
   }
 `;

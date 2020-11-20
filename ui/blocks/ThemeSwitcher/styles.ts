@@ -1,10 +1,5 @@
 import styled from '@emotion/styled';
 
-type StyledComponentProps = {
-  color: string;
-  bgColor: string;
-};
-
 export const ThemeSwitcherButton = styled.button`
   display: flex;
   width: 4rem;
@@ -13,13 +8,13 @@ export const ThemeSwitcherButton = styled.button`
   border-radius: 0.5rem;
   border: 0;
   appearance: none;
-  color: ${(props: StyledComponentProps): string => props.color};
+  color: ${({ theme }) => theme.color};
   background-color: transparent;
 
   svg {
     position: relative;
     top: 0.1rem;
-    fill: ${(props: StyledComponentProps): string => props.bgColor};
+    fill: ${({ theme }) => theme.bgColor};
     transition: 0.2s transform linear, 0.2s opacity linear;
   }
 

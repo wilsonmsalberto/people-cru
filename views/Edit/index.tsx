@@ -10,25 +10,23 @@ import { SubTitle, Title, TitleWrapper, Wrapper } from './styles';
 const NewPerson = (): React.ReactElement => {
     const { peopleList } = useContext(PeopleListContext);
     const router = useRouter();
-    const { id } = router.query;
+    const { id } = router?.query;
 
     const person: Record<string, any> =
-    peopleList.find((person: Record<string, any>) => person.id === Number(id)) || {};
+    peopleList.find((person: Record<string, any>) => person?.id === Number(id)) || {};
 
     return (
-        <>
-            <Wrapper>
-                <TitleWrapper>
-                    <Title>Edit employee</Title>
-                    <SubTitle>Edit the information of your employee</SubTitle>
-                </TitleWrapper>
+        <Wrapper data-testid="edit">
+            <TitleWrapper>
+                <Title>Edit employee</Title>
+                <SubTitle>Edit the information of your employee</SubTitle>
+            </TitleWrapper>
 
-                <PersonForm
-                    activePerson={ person }
-                    submitText="Save"
-                />
-            </Wrapper>
-        </>
+            <PersonForm
+                activePerson={ person }
+                submitText="Save"
+            />
+        </Wrapper>
     );
 };
 

@@ -1,18 +1,19 @@
 import React, { useContext } from 'react';
 import { useRouter } from 'next/router';
 
+// Context
 import { PeopleListContext, PeopleListProvider } from 'context/PeopleList';
 
+// Components
 import Button from 'ui/components/Button';
 import PeopleList from 'ui/blocks/PeopleList/index';
 
+// Styles
 import { SubTitle, Title, TitleWrapper, Wrapper } from './styles';
 
 const Home = (): React.ReactElement => {
     const { resultsAmount } = useContext(PeopleListContext);
     const router = useRouter();
-
-    const handleAddNewClick = (): Promise<any> => router.push('/new');
 
     return (
         <>
@@ -23,9 +24,8 @@ const Home = (): React.ReactElement => {
                 </TitleWrapper>
 
                 <Button
-                    btnStyle="primary"
                     type="submit"
-                    onClick={ handleAddNewClick }
+                    onClick={ (): Promise<any> => router.push('/new') }
                 >
                     Add employee
                 </Button>

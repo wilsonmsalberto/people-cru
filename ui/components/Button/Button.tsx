@@ -1,43 +1,33 @@
 import React from 'react';
 
+// Theme
+import { StyledButton } from './styles';
+
 export type ButtonProps = {
   children: React.ReactElement | string;
   className?: string;
-  onClick?: () => void;
-  onSubmit?: () => void;
   type?: 'button' | 'submit' | 'reset';
+  variant?: 'primary' | 'secondary';
 };
 
 export const Button = ({
     children,
     className,
-    onClick,
-    onSubmit,
     type = 'button',
-}: ButtonProps): React.ReactElement => {
-    const handleOnClick = (event: React.MouseEvent<HTMLButtonElement>): void => {
-        if (event) {
-            event.preventDefault();
-        }
-
-        if (type === 'submit' && onSubmit) {
-            onSubmit();
-        }
-
-        if (onClick) {
-            onClick();
-        }
-    };
-
-    return (
-        <button
-            onClick={ handleOnClick }
-            onSubmit={ handleOnClick }
-            { ...{ type, className } }
-        >
-            { children }
-        </button>
-    );
-};
+    variant = 'primary',
+    ...otherProps
+}: ButtonProps): React.ReactElement => (
+    <StyledButton
+        data-testid="button"
+        { ...{
+            type,
+            className,
+            variant,
+            ...otherProps,
+        } }
+    >
+        { children }
+    </StyledButton>
+);
 
 export default Button;

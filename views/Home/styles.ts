@@ -1,9 +1,5 @@
 import styled from '@emotion/styled';
 
-type StyledComponentProps = {
-  theme: Record<any, string>;
-};
-
 export const Wrapper = styled.section`
   margin-top: 4rem;
   display: flex;
@@ -28,5 +24,5 @@ export const SubTitle = styled.span`
   font-weight: 500;
   font-size: 1.3rem;
   line-height: 2.1rem;
-  color: ${(props: StyledComponentProps): string => props.theme.secondary};
+  color: ${({ theme }) => theme.secondary};
 `;

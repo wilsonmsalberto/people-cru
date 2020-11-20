@@ -2,19 +2,19 @@ import * as React from 'react';
 import { render, themesList } from 'utils/tests';
 
 // Components
-import Edit from '../';
+import ListHeader from '../ListHeader';
 
-const getRenderElement = ({ theme, ...props }: any) => render(
-    <Edit { ...props }>Dummy Edit</Edit>
+const getRenderElement = (props: any) => render(
+    <ListHeader { ...props } />
 );
 
-describe('<Edit />', () => {
+describe('<ListHeader />', () => {
     describe('Theme rendering: ', () => {
         test.each(themesList)('%p theme',
             (theme) => {
                 const { getByTestId } = getRenderElement({ theme });
 
-                const component = getByTestId('edit');
+                const component = getByTestId('listheader');
 
                 expect(component).toBeVisible();
             }
@@ -25,7 +25,7 @@ describe('<Edit />', () => {
         it('should render properly', () => {
             const { getByTestId } = getRenderElement({});
 
-            const component = getByTestId('edit');
+            const component = getByTestId('listheader');
 
             expect(component).toBeVisible();
         });

@@ -1,15 +1,14 @@
 import styled from '@emotion/styled';
 import { rgba } from 'polished';
 
-import { Button } from './Button';
+import { ButtonProps } from './Button';
 
-type StyledComponentProps = {
-  color: string;
-  bgColor: string;
-  borderColor: string;
+type EmotionProps = {
+  theme: Theme;
+  variant?: string;
 };
 
-export const StyledButton = styled(Button)`
+export const StyledButton = styled.button<ButtonProps>`
   position: relative;
   width: 18rem;
   height: 4.5rem;
@@ -22,23 +21,28 @@ export const StyledButton = styled(Button)`
   outline: none;
   transition: 0.2s transform linear, 0.2s opacity linear;
 
-  ${(props: StyledComponentProps): string => `
-    box-shadow: 0 .6rem 1.2rem ${rgba(
-        props.bgColor === 'transparent' ? '#ffffff' : props.bgColor || '#ffffff',
-        0.3
-    )};
-    border: .2rem solid ${rgba(
-        props.borderColor === 'transparent' ? '#ffffff' : props.borderColor || '#ffffff',
-        0.3
-    )};
-    color: ${props.color || ''};
-    background-color: ${props.bgColor || ''};
-    `}
+  ${({ theme, variant }: EmotionProps) => {
+        if (variant === 'primary') {
+            return `
+              color: ${theme.buttonTextColor};
+              background-color: ${theme.buttonBgColor};
+              border: .2rem solid ${rgba(theme.buttonBgColor, 0.3)};
+              box-shadow: 0 .6rem 1.2rem ${rgba(theme.buttonBgColor, 0.3)};
+            `;
+        }
+
+        if (variant === 'secondary') {
+            return `
+              color: ${theme.buttonBgColor};
+              background-color: ${theme.white};
+              border: .2rem solid ${rgba(theme.buttonBgColor, 0.3)};
+            `;
+        }
+    }}
+    
 
   &:hover {
     transform: translateY(0.2rem);
     opacity: 0.85;
   }
 `;
-
-export default StyledButton;

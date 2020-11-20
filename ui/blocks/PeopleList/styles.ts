@@ -1,9 +1,5 @@
 import styled from '@emotion/styled';
 
-type StyledComponentProps = {
-  theme: Record<any, string>;
-};
-
 export const StyledTable = styled.table`
   border: none;
   border-collapse: separate;
@@ -24,7 +20,7 @@ export const StyledTable = styled.table`
   }
 
   td {
-    background-color: ${(props: StyledComponentProps): string => props.theme.tableRow};
+    background-color: ${({ theme }) => theme.tableRow};
 
     &:first-of-type {
       border-top-left-radius: 1rem;

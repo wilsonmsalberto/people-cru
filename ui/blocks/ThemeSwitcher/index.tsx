@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { useTheme } from '@emotion/react';
 
 // Context
 import { AppThemeContext } from 'context/AppTheme';
@@ -13,14 +12,8 @@ import { ThemeSwitcherButton } from './styles';
 const ThemeSwitcher = (): React.ReactElement => {
     const { switchTheme } = useContext(AppThemeContext);
 
-    const { buttonBgColor, buttonTextColor } = useTheme();
-
     return (
-        <ThemeSwitcherButton
-            bgColor={ buttonBgColor }
-            color={ buttonTextColor }
-            onClick={ (): void => switchTheme() }
-        >
+        <ThemeSwitcherButton onClick={ (): void => switchTheme() } >
             <ContrastIcon />
         </ThemeSwitcherButton>
     );
