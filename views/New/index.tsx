@@ -1,18 +1,3 @@
-import PersonForm from 'ui/blocks/PersonForm';
+import { default as New } from './New';
 
-import { SubTitle, Title, TitleWrapper, Wrapper } from './styles';
-
-const NewPerson = (): React.ReactElement => (
-    <>
-        <Wrapper>
-            <TitleWrapper>
-                <Title>Add a new employee</Title>
-                <SubTitle>Fill out the information of your new employee</SubTitle>
-            </TitleWrapper>
-
-            <PersonForm submitText="Add employee" />
-        </Wrapper>
-    </>
-);
-
-export default NewPerson;
+export default New;

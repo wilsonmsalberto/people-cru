@@ -1,23 +1,13 @@
 import { createContext, useCallback, useEffect, useState } from 'react';
 
 import data from 'mocks/peopleList.json';
-
-type Person = {
-  id: number;
-  name: string;
-  birthDate: string;
-  job: string;
-  country: string;
-  salary: string;
-};
-
-type PersonList = Array<Person>;
+import { IPerson, IPersonList } from 'PersonTypes';
 
 declare interface PeopleListContextInterface {
   addNewPerson: (Person) => void;
   updatePerson: (Person) => void;
-  peopleList: Array<Person>;
-  setPeopleList: React.Dispatch<React.SetStateAction<PersonList>>;
+  peopleList: IPersonList;
+  setPeopleList: React.Dispatch<React.SetStateAction<IPersonList>>;
   resultsAmount: number;
   setResultsAmount: React.Dispatch<React.SetStateAction<number>>;
 }
@@ -32,30 +22,30 @@ export const PeopleListProvider = ({
 }: {
   children: React.ReactNode;
 }): React.ReactElement => {
-    const [ peopleList, setPeopleList ] = useState<PersonList>(data);
+    const [ peopleList, setPeopleList ] = useState<IPersonList>(data);
     const [ resultsAmount, setResultsAmount ] = useState<number>(data.length);
 
-    const handleSetPeopleList = useCallback((list: PersonList) => {
+    const handleSetPeopleList = useCallback((list: IPersonList) => {
         setPeopleList(list);
         localStorage.setItem('personList', JSON.stringify(list));
     }, []);
 
-    const updatePerson = (personDetails: Person): void => {
+    const updatePerson = (personDetails: IPerson): void => {
         const { id } = personDetails;
 
         const existingPersonIndex = peopleList.findIndex((person) => person.id === id);
 
-        const newPersonList: PersonList = [ ...peopleList ];
+        const newPersonList: IPersonList = [ ...peopleList ];
 
         newPersonList[existingPersonIndex] = personDetails;
 
         handleSetPeopleList(newPersonList);
     };
 
-    const addNewPerson = (personDetails: Person): void => {
+    const addNewPerson = (personDetails: IPerson): void => {
         const newIndex = peopleList.length + 1;
 
-        const newPerson: Person = {
+        const newPerson: IPerson = {
             id       : newIndex,
             name     : personDetails.name,
             birthDate: personDetails.birthDate,
@@ -64,7 +54,7 @@ export const PeopleListProvider = ({
             salary   : personDetails.salary,
         };
 
-        const newPersonList: PersonList = [ ...peopleList, newPerson ];
+        const newPersonList: IPersonList = [ ...peopleList, newPerson ];
 
         handleSetPeopleList(newPersonList);
     };

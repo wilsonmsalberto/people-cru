@@ -11,13 +11,13 @@ import {
 const mockRouting = jest.fn();
 
 // Components
-import Home from '../Home';
+import ListItems from '../ListItems';
 
 const getRenderElement = ({ theme, ...props }: any) => render(
-    <Home { ...props }/>
+    <table><ListItems { ...props }/></table>
 );
 
-describe('<Home />', () => {
+describe('<ListItems />', () => {
     beforeEach(() => {
         mockNextUseRouter({
             push: mockRouting,
@@ -31,7 +31,7 @@ describe('<Home />', () => {
             (theme) => {
                 const { getByTestId } = getRenderElement({ theme });
 
-                const component = getByTestId('home');
+                const component = getByTestId('listitems');
 
                 expect(component).toBeVisible();
             }
@@ -42,17 +42,17 @@ describe('<Home />', () => {
         it('should render properly', () => {
             const { getByTestId } = getRenderElement({});
 
-            const component = getByTestId('home');
+            const component = getByTestId('listitems');
 
             expect(component).toBeVisible();
         });
     });
 
-    describe('Basic behavior', () => {
-        it('should route on click in new', async () => {
-            const { getByText } = getRenderElement({});
+    describe('Basic behaviour', () => {
+        it('should route on click in edit', async () => {
+            const { queryAllByText } = getRenderElement({});
 
-            const button = getByText('Add employee');
+            const button = queryAllByText('Edit')[0];
 
             fireEvent.click(button);
 

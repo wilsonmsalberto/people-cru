@@ -2,7 +2,6 @@ module.exports = {
     collectCoverage    : true,
     collectCoverageFrom: [
         'context/**/*.{js,jsx,ts,tsx}',
-        'pages/**/*.{js,jsx,ts,tsx}',
         'ui/**/*.{js,jsx,ts,tsx}',
         'views/**/*.{js,jsx,ts,tsx}',
     ],

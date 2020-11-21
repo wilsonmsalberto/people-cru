@@ -6,7 +6,7 @@ import { PeopleListContext, PeopleListProvider } from 'context/PeopleList';
 
 // Components
 import Button from 'ui/components/Button';
-import PeopleList from 'ui/blocks/PeopleList/index';
+import PeopleList from 'ui/blocks/PeopleList';
 
 // Styles
 import { SubTitle, Title, TitleWrapper, Wrapper } from './styles';
@@ -17,7 +17,7 @@ const Home = (): React.ReactElement => {
 
     return (
         <>
-            <Wrapper data-testid="home">
+            <Wrapper data-testid="homepage">
                 <TitleWrapper>
                     <Title>People</Title>
                     <SubTitle>{ resultsAmount } employees</SubTitle>

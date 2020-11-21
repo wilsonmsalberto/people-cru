@@ -1,13 +1,3 @@
-import ListHeader from './ListHeader';
-import ListItems from './ListItems';
-
-import StyledTable from './styles';
-
-const PeopleList = (): React.ReactElement => (
-    <StyledTable>
-        <ListHeader />
-        <ListItems />
-    </StyledTable>
-);
+import { default as PeopleList } from './PeopleList';
 
 export default PeopleList;

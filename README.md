@@ -116,7 +116,6 @@ This command may also be used for deployment purposes, in a service such as Zeit
 #### Improvements
 
 - People form should validate each field upon submission for specific formats and content types
-- Unit tests should meet the minimum coverage set as default
 - Dark mode should be more visually balanced
 - Page transitions could help smooth the understanding of success/failure
 - Success/failure errors or warnings should be informed to the user

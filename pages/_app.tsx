@@ -4,7 +4,7 @@ import Head from 'next/head';
 
 // Theming
 import { Global, ThemeProvider, css } from '@emotion/react';
-import { GlobalStyles, ThemeWrapper } from 'ui/theme';
+import { GlobalStyles } from 'ui/theme';
 
 // Context
 import { AppThemeContext, AppThemeProvider } from 'context/AppTheme';
@@ -20,23 +20,21 @@ const App = ({ Component, pageProps }: AppProps): React.ReactElement => {
 
     return (
         <ThemeProvider theme={ theme }>
-            <ThemeWrapper>
-                <Head>
-                    <link
-                        href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap"
-                        rel="stylesheet"
-                    />
-                </Head>
-                <Header />
+            <Head>
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap"
+                    rel="stylesheet"
+                />
+            </Head>
+            <Header />
 
-                <Main>
-                    <InnerWrapper>
-                        <Component { ...pageProps }></Component>
-                    </InnerWrapper>
-                </Main>
+            <Main>
+                <InnerWrapper>
+                    <Component { ...pageProps }></Component>
+                </InnerWrapper>
+            </Main>
 
-                <Global styles={ css(GlobalStyles.Globals) } />
-            </ThemeWrapper>
+            <Global styles={ css(GlobalStyles.Globals) } />
         </ThemeProvider>
     );
 };

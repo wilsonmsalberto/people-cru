@@ -1,19 +1,27 @@
-import { render, themesList } from 'utils/tests';
+import { cleanup, mockNextUseRouter, render, themesList } from 'utils/tests';
 
 // Components
-import ListHeader from '../ListHeader';
+import Edit from '..';
 
-const getRenderElement = (props: any) => render(
-    <table><ListHeader { ...props } /></table>
+const getRenderElement = ({ theme, ...props }: any) => render(
+    <Edit { ...props }>Dummy Edit</Edit>
 );
 
-describe('<ListHeader />', () => {
+describe('<Edit />', () => {
+    beforeEach(() => {
+        mockNextUseRouter({
+            query: { id: 1 },
+        });
+    });
+
+    afterEach(cleanup);
+
     describe('Theme rendering: ', () => {
         test.each(themesList)('%p theme',
             (theme) => {
                 const { getByTestId } = getRenderElement({ theme });
 
-                const component = getByTestId('listheader');
+                const component = getByTestId('editpage');
 
                 expect(component).toBeVisible();
             }
@@ -24,7 +32,7 @@ describe('<ListHeader />', () => {
         it('should render properly', () => {
             const { getByTestId } = getRenderElement({});
 
-            const component = getByTestId('listheader');
+            const component = getByTestId('editpage');
 
             expect(component).toBeVisible();
         });

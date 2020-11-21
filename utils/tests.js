@@ -3,8 +3,13 @@ import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 import { ThemeProvider } from '@emotion/react';
 import { matchers } from '@emotion/jest';
-import { Dark, Light } from 'ui/theme';
 import * as nextRouter from 'next/router';
+
+// Theme
+import { Dark, Light } from 'ui/theme';
+
+// Context
+import { AppThemeProvider } from 'context/AppTheme';
 
 export function mockNextUseRouter({
     asPath   = '/edit/1',
@@ -31,9 +36,11 @@ const themes = {
 export const themesList = Object.keys(themes);
 
 const Providers = ({ children, theme = 'light' }) => (
-    <ThemeProvider theme={ themes[theme] }>
-        { children }
-    </ThemeProvider>
+    <AppThemeProvider>
+        <ThemeProvider theme={ themes[theme] }>
+            { children }
+        </ThemeProvider>
+    </AppThemeProvider>
 );
 
 const customRender = (ui, options) => render(ui, { wrapper: Providers, ...options });
