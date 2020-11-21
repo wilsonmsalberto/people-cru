@@ -4,6 +4,7 @@ import '@testing-library/jest-dom';
 import * as React from 'react';
 import { render } from '@testing-library/react';
 import { ThemeProvider } from '@emotion/react';
+import { matchers } from '@emotion/jest';
 import { Dark, Light } from 'ui/theme';
 
 jest.mock('next/router', () => ({
@@ -31,6 +32,8 @@ const Providers = ({ children, theme = 'light' }) => (
 );
 
 const customRender = (ui, options) => render(ui, { wrapper: Providers, ...options });
+
+expect.extend(matchers);
 
 // re-export everything
 export * from '@testing-library/react';

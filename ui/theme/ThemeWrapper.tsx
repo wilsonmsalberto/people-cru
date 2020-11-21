@@ -7,12 +7,12 @@ const Wrapper = ({ children }: { children: React.ReactNode }): React.ReactElemen
     const bodyStyles = `
         body {
             color: ${textColor};
-            background-color: ${background}
+            background-color: ${background};
         }
     `;
 
     return (
-        <div>
+        <div data-testid="themewrapper">
             <Global styles={ css(bodyStyles) } />
             { children }
         </div>

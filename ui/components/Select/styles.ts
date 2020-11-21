@@ -1,30 +1,29 @@
 import styled from '@emotion/styled';
 
-type StyledComponentProps = {
-  theme: Record<string, any>;
+type EmotionProps = {
+  theme: Theme;
   isFocused?: boolean;
 };
 
 export const SelectWrapper = styled.div`
   margin-bottom: 3rem;
+`;
 
-  label {
-    display: block;
-    width: 100%;
-    color: ${({ isFocused, theme }: StyledComponentProps) => isFocused ? theme.highlight : theme.secondary};
+export const StyledLabel = styled.label`
+  display: block;
+  width: 100%;
+  color: ${({ isFocused, theme }: EmotionProps) => isFocused ? theme.highlight : theme.secondary};
+  transition: 0.3s color linear;
+`;
 
-    transition: 0.3s color linear;
-  }
-
-  span {
-    display: block;
-    margin-top: 0.8rem;
-    width: 100%;
-    font-size: 1.3rem;
-    line-height: 1.6rem;
-    color: ${({ theme }) => theme.secondary};
-    transition: 0.3s color linear;
-  }
+export const StyledSpan = styled.span`
+  display: block;
+  margin-top: 0.8rem;
+  width: 100%;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  color: ${({ theme }) => theme.secondary};
+  transition: 0.3s color linear;
 `;
 
 export const SelectInnerWrapper = styled.div`
@@ -43,21 +42,19 @@ export const SelectInnerWrapper = styled.div`
     z-index: 1;
     color: ${({ theme }) => theme.secondary};
   }
-
-  select {
-    display: block;
-    width: 100%;
-    outline: 0;
-    font-size: 2rem;
-    line-height: 2.4rem;
-    padding: 0.8rem 0;
-    appearance: none;
-    background: none;
-    border: 0;
-    border-radius: 0;
-    border-bottom: .1rem solid ${({ isFocused, theme }: StyledComponentProps) => isFocused ? theme.highlight : theme.textColor};
-    transition: 0.3s border linear;
-  }
 `;
 
-export default SelectWrapper;
+export const StyledSelect = styled.select`
+  display: block;
+  width: 100%;
+  outline: 0;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  padding: 0.8rem 0;
+  appearance: none;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  border-bottom: .1rem solid ${({ isFocused, theme }: EmotionProps) => isFocused ? theme.highlight : theme.textColor};
+  transition: 0.3s border linear;
+`;

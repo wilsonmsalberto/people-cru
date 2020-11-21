@@ -1,1 +1,5 @@
-export { default as ContrastIcon } from './ContrastIcon';
+import { default as ContrastIcon } from './ContrastIcon';
+
+export {
+    ContrastIcon,
+};

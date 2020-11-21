@@ -16,18 +16,22 @@ export const Button = ({
     type = 'button',
     variant = 'primary',
     ...otherProps
-}: ButtonProps): React.ReactElement => (
-    <StyledButton
-        data-testid="button"
-        { ...{
-            type,
-            className,
-            variant,
-            ...otherProps,
-        } }
-    >
-        { children }
-    </StyledButton>
-);
+}: ButtonProps): React.ReactElement => {
+    const types = [ 'button', 'submit', 'reset' ];
+
+    return (
+        <StyledButton
+            data-testid="button"
+            type={ types.includes(type) ? type : 'button' }
+            { ...{
+                className,
+                variant,
+                ...otherProps,
+            } }
+        >
+            { children }
+        </StyledButton>
+    );
+};
 
 export default Button;

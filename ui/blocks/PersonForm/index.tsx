@@ -1,13 +1,17 @@
 import React, { useContext, useState } from 'react';
 import { useRouter } from 'next/router';
 
-import { Select } from 'ui/components/Select';
-import { Input } from 'ui/components/Input';
-
+// Context
 import { PeopleListContext, PeopleListProvider } from 'context/PeopleList';
 
-import countries from './countries.json';
+// Components
+import Select from 'ui/components/Select';
+import Input from 'ui/components/Input';
 
+// Mock Data
+import countries from 'mocks/countries.json';
+
+// Styles
 import { FormFooter, FormInnerWrapper, SubmitButton } from './styles';
 
 type PersonFormInterface = {
@@ -99,13 +103,12 @@ const PersonForm = ({ activePerson = {}, submitText }: PersonFormInterface): Rea
             </FormInnerWrapper>
             <FormFooter>
                 <SubmitButton
-                    btnStyle="secondary"
+                    variant="secondary"
                     onClick={ handleCancelClick }
                 >
                     Cancel
                 </SubmitButton>
                 <SubmitButton
-                    btnStyle="primary"
                     type="submit"
                     onSubmit={ handleSubmit }
                 >

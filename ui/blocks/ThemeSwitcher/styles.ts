@@ -8,13 +8,12 @@ export const ThemeSwitcherButton = styled.button`
   border-radius: 0.5rem;
   border: 0;
   appearance: none;
-  color: ${({ theme }) => theme.color};
+  color: ${({ theme }) => theme.buttonBgColor};
   background-color: transparent;
 
   svg {
     position: relative;
     top: 0.1rem;
-    fill: ${({ theme }) => theme.bgColor};
     transition: 0.2s transform linear, 0.2s opacity linear;
   }
 

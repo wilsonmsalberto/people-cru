@@ -22,15 +22,6 @@ export const StyledButton = styled.button<ButtonProps>`
   transition: 0.2s transform linear, 0.2s opacity linear;
 
   ${({ theme, variant }: EmotionProps) => {
-        if (variant === 'primary') {
-            return `
-              color: ${theme.buttonTextColor};
-              background-color: ${theme.buttonBgColor};
-              border: .2rem solid ${rgba(theme.buttonBgColor, 0.3)};
-              box-shadow: 0 .6rem 1.2rem ${rgba(theme.buttonBgColor, 0.3)};
-            `;
-        }
-
         if (variant === 'secondary') {
             return `
               color: ${theme.buttonBgColor};
@@ -38,6 +29,13 @@ export const StyledButton = styled.button<ButtonProps>`
               border: .2rem solid ${rgba(theme.buttonBgColor, 0.3)};
             `;
         }
+
+        return `
+          color: ${theme.buttonTextColor};
+          background-color: ${theme.buttonBgColor};
+          border: .2rem solid ${rgba(theme.buttonBgColor, 0.3)};
+          box-shadow: 0 .6rem 1.2rem ${rgba(theme.buttonBgColor, 0.3)};
+        `;
     }}
     
 
