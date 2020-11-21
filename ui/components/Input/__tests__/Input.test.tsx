@@ -33,7 +33,7 @@ describe('<Input />', () => {
 
                 const component = getByTestId('input');
 
-                expect(component).toBeVisible();
+                expect(component).toMatchSnapshot();
             }
         );
     });

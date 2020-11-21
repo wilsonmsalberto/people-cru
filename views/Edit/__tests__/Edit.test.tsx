@@ -1,24 +1,29 @@
-import {
-    render,
-    themesList,
-} from 'utils/tests';
+import { cleanup, mockNextUseRouter, render, themesList } from 'utils/tests';
 
 // Components
-import New from '../New';
+import Edit from '..';
 
 const getRenderElement = ({ theme, ...props }: any) => render(
-    <New { ...props }/>
+    <Edit { ...props }>Dummy Edit</Edit>
 );
 
-describe('<New />', () => {
+describe('<Edit />', () => {
+    beforeEach(() => {
+        mockNextUseRouter({
+            query: { id: 1 },
+        });
+    });
+
+    afterEach(cleanup);
+
     describe('Theme rendering: ', () => {
         test.each(themesList)('%p theme',
             (theme) => {
                 const { getByTestId } = getRenderElement({ theme });
 
-                const component = getByTestId('newpage');
+                const component = getByTestId('editpage');
 
-                expect(component).toBeVisible();
+                expect(component).toMatchSnapshot();
             }
         );
     });
@@ -27,7 +32,7 @@ describe('<New />', () => {
         it('should render properly', () => {
             const { getByTestId } = getRenderElement({});
 
-            const component = getByTestId('newpage');
+            const component = getByTestId('editpage');
 
             expect(component).toBeVisible();
         });

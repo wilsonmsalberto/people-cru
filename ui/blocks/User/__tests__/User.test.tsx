@@ -15,7 +15,7 @@ describe('<User />', () => {
 
                 const component = getByTestId('user');
 
-                expect(component).toBeVisible();
+                expect(component).toMatchSnapshot();
             }
         );
     });

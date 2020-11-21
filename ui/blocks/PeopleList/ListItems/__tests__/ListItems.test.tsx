@@ -33,7 +33,7 @@ describe('<ListItems />', () => {
 
                 const component = getByTestId('listitems');
 
-                expect(component).toBeVisible();
+                expect(component).toMatchSnapshot();
             }
         );
     });

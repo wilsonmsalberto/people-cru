@@ -15,7 +15,7 @@ describe('<Header />', () => {
 
                 const component = getByTestId('header');
 
-                expect(component).toBeVisible();
+                expect(component).toMatchSnapshot();
             }
         );
     });

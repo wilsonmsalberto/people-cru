@@ -26,7 +26,7 @@ describe('<PersonForm />', () => {
 
                 const component = getByTestId('personform');
 
-                expect(component).toBeVisible();
+                expect(component).toMatchSnapshot();
             }
         );
     });

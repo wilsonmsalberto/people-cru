@@ -15,7 +15,7 @@ describe('<ListHeader />', () => {
 
                 const component = getByTestId('listheader');
 
-                expect(component).toBeVisible();
+                expect(component).toMatchSnapshot();
             }
         );
     });

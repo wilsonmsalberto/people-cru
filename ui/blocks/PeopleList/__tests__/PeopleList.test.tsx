@@ -15,7 +15,7 @@ describe('<PeopleList />', () => {
 
                 const component = getByTestId('peoplelist');
 
-                expect(component).toBeVisible();
+                expect(component).toMatchSnapshot();
             }
         );
     });

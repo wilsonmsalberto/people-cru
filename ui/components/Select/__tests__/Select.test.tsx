@@ -42,7 +42,7 @@ describe('<Select />', () => {
 
                 const component = getByTestId('select');
 
-                expect(component).toBeVisible();
+                expect(component).toMatchSnapshot();
             }
         );
     });

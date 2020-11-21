@@ -18,7 +18,7 @@ describe('<Button />', () => {
 
                 const component = getByTestId('button');
 
-                expect(component).toBeVisible();
+                expect(component).toMatchSnapshot();
             }
         );
 

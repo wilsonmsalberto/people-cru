@@ -33,7 +33,7 @@ describe('<Home />', () => {
 
                 const component = getByTestId('homepage');
 
-                expect(component).toBeVisible();
+                expect(component).toMatchSnapshot();
             }
         );
     });

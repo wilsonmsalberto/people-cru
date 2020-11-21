@@ -20,7 +20,7 @@ describe('<ThemeSwitcher />', () => {
 
                 const component = getByTestId('themeswitcher');
 
-                expect(component).toBeVisible();
+                expect(component).toMatchSnapshot();
             }
         );
     });
