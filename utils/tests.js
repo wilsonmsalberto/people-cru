@@ -1,22 +1,28 @@
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-/* eslint-disable react/prop-types */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types, no-import-assign, react/prop-types, no-import-assign */
 import '@testing-library/jest-dom';
 import * as React from 'react';
 import { render } from '@testing-library/react';
 import { ThemeProvider } from '@emotion/react';
 import { matchers } from '@emotion/jest';
 import { Dark, Light } from 'ui/theme';
+import * as nextRouter from 'next/router';
 
-jest.mock('next/router', () => ({
-    useRouter() {
-        return {
-            pathname: '/edit/$id',
-            route   : '/edit/$id',
-            query   : { id: 1 },
-            asPath  : '/edit/1',
-        };
-    },
-}));
+export function mockNextUseRouter({
+    asPath   = '/edit/1',
+    pathname = '/edit/$id',
+    query    = { id: 1 },
+    route    = '/edit/$id',
+    ...props
+}) {
+    nextRouter.useRouter = jest.fn();
+    nextRouter.useRouter.mockImplementation(() => ({
+        route,
+        pathname,
+        query,
+        asPath,
+        ...props,
+    }));
+}
 
 const themes = {
     dark : Dark,

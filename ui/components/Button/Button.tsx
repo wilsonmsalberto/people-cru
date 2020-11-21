@@ -8,6 +8,7 @@ export type ButtonProps = {
   className?: string;
   type?: 'button' | 'submit' | 'reset';
   variant?: 'primary' | 'secondary';
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
 };
 
 export const Button = ({
