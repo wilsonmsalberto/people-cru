@@ -1,11 +1,5 @@
 import styled from '@emotion/styled';
 
-type StyledComponentProps = {
-  bgColor?: string;
-  color?: string;
-  theme: Record<string, any>;
-};
-
 export const User = styled.aside`
   display: grid;
   grid-template-columns: 1fr auto;
@@ -21,19 +15,19 @@ export const UserImage = styled.div`
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
-  background-color: ${({ bgColor, theme }: StyledComponentProps) => bgColor || theme.bgColor};
+  background-color: ${({ theme }) => theme.pippin};
 `;
 
 export const UserName = styled.h2`
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 1.9rem;
-  color: ${({ color, theme }: StyledComponentProps) => color || theme.color};
+  color: ${({ theme }) => theme.textColor};
 `;
 
 export const UserRole = styled.h3`
   font-weight: 500;
   font-size: 1.3rem;
   line-height: 1.6rem;
-  color: ${({ color, theme }: StyledComponentProps) => color || theme.color};
+  color: ${({ theme }) => theme.secondary};
 `;
