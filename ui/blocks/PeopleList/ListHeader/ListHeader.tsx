@@ -1,5 +1,3 @@
-import React from 'react';
-
 // Theme
 import { TableHeader } from './styles';
 

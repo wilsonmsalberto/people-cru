@@ -1,4 +1,3 @@
-import React from 'react';
 import { Global, css, useTheme } from '@emotion/react';
 
 const Wrapper = ({ children }: { children: React.ReactNode }): React.ReactElement => {

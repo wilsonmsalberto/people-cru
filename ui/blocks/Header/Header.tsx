@@ -1,5 +1,3 @@
-import React from 'react';
-
 // Components
 import ThemeSwitcher from 'ui/blocks/ThemeSwitcher';
 import User from 'ui/blocks/User';

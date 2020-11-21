@@ -1,5 +1,3 @@
-import React from 'react';
-
 import PersonForm from 'ui/blocks/PersonForm';
 
 import { SubTitle, Title, TitleWrapper, Wrapper } from './styles';

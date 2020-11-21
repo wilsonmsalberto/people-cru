@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types, no-import-assign, react/prop-types, no-import-assign */
 import '@testing-library/jest-dom';
-import * as React from 'react';
 import { render } from '@testing-library/react';
 import { ThemeProvider } from '@emotion/react';
 import { matchers } from '@emotion/jest';

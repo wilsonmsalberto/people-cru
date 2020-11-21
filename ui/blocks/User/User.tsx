@@ -1,5 +1,3 @@
-import React from 'react';
-
 // Styles
 import { User, UserImage, UserName, UserRole } from './styles';
 

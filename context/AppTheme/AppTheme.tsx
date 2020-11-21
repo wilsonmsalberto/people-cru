@@ -1,9 +1,5 @@
-import React, {
-    createContext,
-    useCallback,
-    useEffect,
-    useMemo,
-    useState,
+import {
+    createContext, useCallback, useEffect, useMemo, useState,
 } from 'react';
 
 // Theme

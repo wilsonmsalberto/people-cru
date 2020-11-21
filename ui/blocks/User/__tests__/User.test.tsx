@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { render, themesList } from 'utils/tests';
 
 // Components
