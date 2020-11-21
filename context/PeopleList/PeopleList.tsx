@@ -54,7 +54,7 @@ export const PeopleListProvider = ({
             salary   : personDetails.salary,
         };
 
-        const newPersonList: IPersonList = [ ...peopleList, newPerson ];
+        const newPersonList: IPersonList = [ newPerson, ...peopleList ];
 
         handleSetPeopleList(newPersonList);
     };
